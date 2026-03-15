@@ -1,54 +1,347 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Nuveon</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body{
-font-family: Arial;
-margin:0;
-background:#f5f5f5;
-text-align:center;
-}
-.header{
-padding:80px;
-background:white;
-}
-.header h1{
-font-size:60px;
-margin:0;
-}
-.section{
-padding:60px;
-}
-.btn{
-background:black;
-color:white;
-padding:15px 30px;
-text-decoration:none;
-border-radius:5px;
-}
-</style>
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NUVEON | Elevate Everyday Living</title>
+  <meta name="description" content="NUVEON is a curated discovery store bringing clever, beautifully designed innovations to everyday living." />
+  <style>
+    :root {
+      --charcoal: #1F1F1F;
+      --stone: #D8D2C8;
+      --white: #ffffff;
+      --soft-text: #5f5a54;
+    }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--stone);
+      color: var(--charcoal);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background: var(--stone);
+      padding: 22px 40px;
+      border-bottom: 1px solid rgba(31,31,31,0.08);
+      position: sticky;
+      top: 0;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 32px;
+      letter-spacing: 6px;
+      font-weight: 300;
+    }
+
+    .menu {
+      display: flex;
+      gap: 28px;
+      font-size: 15px;
+    }
+
+    .hero {
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 110px 40px 90px;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      letter-spacing: 8px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    .hero p.tagline {
+      font-size: 20px;
+      letter-spacing: 3px;
+      margin-bottom: 26px;
+      text-transform: uppercase;
+    }
+
+    .hero p.desc {
+      max-width: 700px;
+      font-size: 18px;
+      color: rgba(255,255,255,0.86);
+      margin-bottom: 36px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--stone);
+      color: var(--charcoal);
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 70px 40px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 34px;
+      font-weight: 300;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      color: var(--soft-text);
+      margin-bottom: 36px;
+      font-size: 17px;
+    }
+
+    .grid-3, .grid-2 {
+      display: grid;
+      gap: 24px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .card {
+      background: rgba(255,255,255,0.45);
+      border-radius: 22px;
+      padding: 28px;
+      border: 1px solid rgba(31,31,31,0.08);
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+
+    .card p {
+      color: var(--soft-text);
+      font-size: 15px;
+    }
+
+    .product-card {
+      background: #f4f1ed;
+      border-radius: 24px;
+      padding: 30px;
+      border: 1px solid rgba(31,31,31,0.08);
+    }
+
+    .product-card .category {
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--soft-text);
+      margin-bottom: 10px;
+    }
+
+    .product-card h3 {
+      font-size: 28px;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      color: var(--soft-text);
+      margin-bottom: 14px;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 16px;
+      color: var(--charcoal);
+    }
+
+    .about-box {
+      background: var(--charcoal);
+      color: var(--white);
+      border-radius: 28px;
+      padding: 40px;
+    }
+
+    .about-box p {
+      max-width: 850px;
+      color: rgba(255,255,255,0.84);
+      font-size: 17px;
+    }
+
+    footer {
+      padding: 36px 40px 50px;
+      border-top: 1px solid rgba(31,31,31,0.08);
+      color: var(--soft-text);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        gap: 14px;
+        font-size: 13px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p.tagline {
+        font-size: 16px;
+      }
+
+      .logo {
+        font-size: 24px;
+        letter-spacing: 4px;
+      }
+
+      header, .hero, section, footer {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  </style>
+</head>
 <body>
 
-<div class="header">
-<h1>NUVEON</h1>
-<p>Curated Modern Lifestyle Products</p>
-</div>
+  <header>
+    <div class="nav">
+      <div class="logo">NUVEON</div>
+      <nav class="menu">
+        <a href="#shop">Shop</a>
+        <a href="#discover">Discover</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="section">
-<h2>Smart Living</h2>
-<p>Discover innovative and beautifully designed everyday products.</p>
-<a class="btn" href="#">Explore Products</a>
-</div>
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>NUVEON</h1>
+      <p class="tagline">Elevate Everyday Living</p>
+      <p class="desc">
+        A curated discovery store bringing clever, beautifully designed innovations to everyday living.
+        Discover smart, practical and modern products that make life easier, cleaner and more enjoyable.
+      </p>
+      <a class="btn" href="#shop">Explore the Collection</a>
+    </div>
+  </section>
 
-<div class="section">
-<h2>Designed for Modern Homes</h2>
-<p>Carefully selected lifestyle products for comfort and convenience.</p>
-</div>
+  <section id="discover">
+    <div class="container">
+      <h2>Discover Better Living</h2>
+      <p class="section-intro">
+        NUVEON brings together beautiful design, practical technology and thoughtfully selected products
+        that improve daily life in modern Australian homes.
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>New Discoveries</h3>
+          <p>Innovative products not yet common in Australia, selected for design, usefulness and modern appeal.</p>
+        </div>
+        <div class="card">
+          <h3>Smart Home</h3>
+          <p>Clean, functional products that add convenience, hygiene and ease to your everyday routines.</p>
+        </div>
+        <div class="card">
+          <h3>Solar Living</h3>
+          <p>Outdoor and energy-smart lifestyle products designed to create warm, modern spaces with less effort.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop">
+    <div class="container">
+      <h2>Featured Products</h2>
+      <p class="section-intro">
+        A first look at some of NUVEON’s curated smart living products.
+      </p>
+
+      <div class="grid-2">
+        <div class="product-card">
+          <div class="category">Smart Home · New Discoveries</div>
+          <h3>Touchless Automatic Soap Dispenser</h3>
+          <p>A sleek touchless soap dispenser designed to bring hygiene, convenience and modern simplicity to everyday living.</p>
+          <div class="price">$49</div>
+          <p>Touchless infrared sensor · Hygienic & safe · Elegant modern design · Easy refill system</p>
+        </div>
+
+        <div class="product-card">
+          <div class="category">Solar Living · New Discoveries</div>
+          <h3>Solar LED Outdoor Wall Light</h3>
+          <p>Elegant solar wall lighting designed to create a warm atmosphere for gardens, balconies and outdoor living spaces.</p>
+          <div class="price">Coming Soon</div>
+          <p>Solar powered · Warm ambient glow · Weather resistant · Easy wall installation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="about-box">
+        <h2>About NUVEON</h2>
+        <p>
+          NUVEON is a curated discovery store focused on intelligent design, practical innovation and
+          beautifully selected products for modern living. Many clever products already exist globally but
+          are not yet common in Australia. Our goal is simple: to bring thoughtful innovations and better
+          everyday experiences into Australian homes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="footer-inner">
+      <div>© 2026 NUVEON. All rights reserved.</div>
+      <div>Contact: hello@nuveon.com.au</div>
+    </div>
+  </footer>
 
 </body>
 </html>
