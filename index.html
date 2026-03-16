@@ -2,203 +2,198 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>NUVEON | Elevate Everyday Living</title>
-
 <link rel="icon" type="image/png" href="favicon.png">
 
 <style>
-
 :root{
---charcoal:#1F1F1F;
---stone:#D8D2C8;
---soft:#6d6d6d;
---white:#ffffff;
+  --charcoal:#1F1F1F;
+  --stone:#D8D2C8;
+  --soft:#6d6d6d;
+  --white:#ffffff;
 }
 
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 body{
-font-family:Arial, Helvetica, sans-serif;
-background:var(--stone);
-color:var(--charcoal);
-line-height:1.6;
+  font-family:Arial, Helvetica, sans-serif;
+  background:var(--stone);
+  color:var(--charcoal);
+  line-height:1.6;
 }
 
 .container{
-width:90%;
-max-width:1200px;
-margin:auto;
+  width:90%;
+  max-width:1200px;
+  margin:auto;
 }
 
 header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:22px 0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px 0;
 }
 
 .logo{
-font-size:22px;
-letter-spacing:4px;
-font-weight:500;
+  font-size:22px;
+  letter-spacing:4px;
+  font-weight:500;
 }
 
 nav a{
-margin-left:28px;
-text-decoration:none;
-color:var(--charcoal);
-font-size:14px;
+  margin-left:28px;
+  text-decoration:none;
+  color:var(--charcoal);
+  font-size:14px;
 }
 
 .hero{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-margin-top:40px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  margin-top:40px;
+  align-items:center;
 }
 
 .hero-left{
-background:#121212;
-color:white;
-padding:60px;
-border-radius:20px;
+  background:#121212;
+  color:white;
+  padding:60px;
+  border-radius:20px;
 }
 
 .hero-left h1{
-font-size:48px;
-letter-spacing:4px;
-margin-bottom:15px;
+  font-size:48px;
+  letter-spacing:4px;
+  margin-bottom:15px;
 }
 
 .hero-left p{
-color:#c9c9c9;
-margin-bottom:30px;
+  color:#c9c9c9;
+  margin-bottom:30px;
 }
 
 .btn{
-display:inline-block;
-padding:12px 24px;
-border-radius:25px;
-background:white;
-color:black;
-text-decoration:none;
-margin-right:12px;
-font-size:14px;
+  display:inline-block;
+  padding:12px 24px;
+  border-radius:25px;
+  background:white;
+  color:black;
+  text-decoration:none;
+  margin-right:12px;
+  font-size:14px;
 }
 
 .hero-img img{
-width:100%;
-border-radius:20px;
+  width:100%;
+  border-radius:20px;
+  display:block;
 }
 
 .section{
-margin-top:70px;
+  margin-top:70px;
 }
 
 .section h2{
-font-size:30px;
-margin-bottom:15px;
+  font-size:30px;
+  margin-bottom:15px;
 }
 
 .section p{
-color:var(--soft);
-margin-bottom:30px;
+  color:var(--soft);
+  margin-bottom:30px;
 }
 
 .grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
 }
 
 .card{
-background:white;
-border-radius:16px;
-overflow:hidden;
-transition:0.3s;
+  background:white;
+  border-radius:16px;
+  overflow:hidden;
+  transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-6px);
-box-shadow:0 15px 40px rgba(0,0,0,0.1);
+  transform:translateY(-6px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.1);
 }
 
 .card img{
-width:100%;
+  width:100%;
+  display:block;
 }
 
 .card-content{
-padding:20px;
+  padding:20px;
 }
 
 .card-content h3{
-font-size:18px;
-margin-bottom:8px;
+  font-size:18px;
+  margin-bottom:8px;
 }
 
 .card-content p{
-font-size:14px;
-color:var(--soft);
+  font-size:14px;
+  color:var(--soft);
 }
 
 .about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-margin-top:60px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  margin-top:60px;
 }
 
 .about-box{
-background:#1a1a1a;
-color:white;
-padding:40px;
-border-radius:16px;
+  background:#1a1a1a;
+  color:white;
+  padding:40px;
+  border-radius:16px;
 }
 
 .contact{
-background:white;
-padding:40px;
-border-radius:16px;
+  background:white;
+  padding:40px;
+  border-radius:16px;
 }
 
 .contact p{
-margin-bottom:10px;
+  margin-bottom:10px;
 }
 
 footer{
-text-align:center;
-padding:40px;
-margin-top:80px;
-color:#777;
-font-size:13px;
+  text-align:center;
+  padding:40px;
+  margin-top:80px;
+  color:#777;
+  font-size:13px;
 }
 
 @media(max-width:900px){
+  .hero{
+    grid-template-columns:1fr;
+  }
 
-.hero{
-grid-template-columns:1fr;
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .about{
+    grid-template-columns:1fr;
+  }
 }
-
-.grid{
-grid-template-columns:1fr;
-}
-
-.about{
-grid-template-columns:1fr;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
@@ -206,142 +201,114 @@ grid-template-columns:1fr;
 <div class="container">
 
 <header>
+  <div class="logo">NUVEON</div>
 
-<div class="logo">NUVEON</div>
-
-<nav>
-<a href="#">Discover</a>
-<a href="#">Shop</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
-</nav>
-
+  <nav>
+    <a href="#">Discover</a>
+    <a href="#">Shop</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
 </header>
 
 <div class="hero">
+  <div class="hero-left">
+    <p style="letter-spacing:2px;font-size:12px;">CURATED MODERN LIVING</p>
+    <h1>NUVEON</h1>
+    <p>Discover smart, practical and beautifully designed products that bring ease and modern style into everyday life.</p>
+    <a class="btn" href="#products">Explore Collection</a>
+    <a class="btn" href="#about">Learn More</a>
+  </div>
 
-<div class="hero-left">
-
-<p style="letter-spacing:2px;font-size:12px;">CURATED MODERN LIVING</p>
-
-<h1>NUVEON</h1>
-
-<p>Discover smart, practical and beautifully designed products that bring ease and modern style into everyday life.</p>
-
-<a class="btn">Explore Collection</a>
-
-<a class="btn">Learn More</a>
-
-</div>
-
-<div class="hero-img">
-
-<img src="assets/nuveon-solar-wall-light.jpg">
-
-</div>
-
+  <div class="hero-img">
+    <img src="assets/images/products/nuveon-solar-wall-light.jpg" alt="Solar Outdoor Wall Light">
+  </div>
 </div>
 
 <div class="section">
-
-<h2>Discover Better Living</h2>
-
-<p>NUVEON brings together thoughtful design, practical innovation and everyday usefulness for modern living.</p>
-
+  <h2>Discover Better Living</h2>
+  <p>NUVEON brings together thoughtful design, practical innovation and everyday usefulness for modern living.</p>
 </div>
 
-<div class="section">
+<div class="section" id="products">
+  <h2>Featured Products</h2>
 
-<h2>Featured Products</h2>
+  <div class="grid">
 
-<div class="grid">
+    <div class="card">
+      <img src="assets/images/products/nuveon-solar-wall-light.jpg" alt="Solar Outdoor Wall Light">
+      <div class="card-content">
+        <h3>Solar Outdoor Wall Light</h3>
+        <p>Elegant outdoor lighting for modern homes.</p>
+      </div>
+    </div>
 
-<div class="card">
-<img src="assets/nuveon-solar-wall-light.jpg">
-<div class="card-content">
-<h3>Solar Outdoor Wall Light</h3>
-<p>Elegant outdoor lighting for modern homes.</p>
-</div>
-</div>
+    <div class="card">
+      <img src="assets/images/products/nuveon-touchless-soap-dispenser.jpg" alt="Touchless Soap Dispenser">
+      <div class="card-content">
+        <h3>Touchless Soap Dispenser</h3>
+        <p>Modern hygiene with automatic touchless technology.</p>
+      </div>
+    </div>
 
-<div class="card">
-<img src="assets/nuveon-touchless-soap-dispenser.jpg">
-<div class="card-content">
-<h3>Touchless Soap Dispenser</h3>
-<p>Modern hygiene with automatic touchless technology.</p>
-</div>
-</div>
+    <div class="card">
+      <img src="assets/images/products/nuveon-faucet-sensor-adapter.jpg" alt="Smart Faucet Sensor Adapter">
+      <div class="card-content">
+        <h3>Smart Faucet Sensor Adapter</h3>
+        <p>Upgrade your tap with smart touchless convenience.</p>
+      </div>
+    </div>
 
-<div class="card">
-<img src="assets/nuveon-faucet-sensor-adapter.jpg">
-<div class="card-content">
-<h3>Smart Faucet Sensor Adapter</h3>
-<p>Upgrade your tap with smart touchless convenience.</p>
-</div>
-</div>
+    <div class="card">
+      <img src="assets/images/products/nuveon-diy-dollhouse.jpg" alt="DIY Miniature Dollhouse Kit">
+      <div class="card-content">
+        <h3>DIY Miniature Dollhouse Kit</h3>
+        <p>A beautiful creative build experience.</p>
+      </div>
+    </div>
 
-<div class="card">
-<img src="assets/nuveon-diy-dollhouse.jpg">
-<div class="card-content">
-<h3>DIY Miniature Dollhouse Kit</h3>
-<p>A beautiful creative build experience.</p>
-</div>
-</div>
+    <div class="card">
+      <img src="assets/images/products/nuveon-travel-cotton-towel.jpg" alt="Compressed Travel Cotton Towel">
+      <div class="card-content">
+        <h3>Compressed Travel Cotton Towel</h3>
+        <p>Compact travel towel that expands with water.</p>
+      </div>
+    </div>
 
-<div class="card">
-<img src="assets/nuveon-travel-cotton-towel.jpg">
-<div class="card-content">
-<h3>Compressed Travel Cotton Towel</h3>
-<p>Compact travel towel that expands with water.</p>
-</div>
-</div>
+    <div class="card">
+      <img src="assets/images/products/nuveon-automatic-toothpaste-dispenser.jpg" alt="Automatic Toothpaste Dispenser">
+      <div class="card-content">
+        <h3>Automatic Toothpaste Dispenser</h3>
+        <p>A smarter and cleaner bathroom routine.</p>
+      </div>
+    </div>
 
-<div class="card">
-<img src="assets/nuveon-automatic-toothpaste-dispenser.jpg">
-<div class="card-content">
-<h3>Automatic Toothpaste Dispenser</h3>
-<p>A smarter and cleaner bathroom routine.</p>
-</div>
-</div>
-
-</div>
-
+  </div>
 </div>
 
-<div class="about">
+<div class="about" id="about">
 
-<div class="about-box">
+  <div class="about-box">
+    <h2>About NUVEON</h2>
+    <p>NUVEON is a curated discovery store focused on intelligent design, practical innovation and beautifully designed products for modern living.</p>
+  </div>
 
-<h2>About NUVEON</h2>
+  <div class="contact">
+    <h2>Contact</h2>
+    <p><strong>Phone</strong></p>
+    <p>0434 198 597</p>
 
-<p>NUVEON is a curated discovery store focused on intelligent design, practical innovation and beautifully designed products for modern living.</p>
+    <p><strong>Email</strong></p>
+    <p>support@nuveon.com.au</p>
 
-</div>
-
-<div class="contact">
-
-<h2>Contact</h2>
-
-<p><strong>Phone</strong></p>
-
-<p>0434 198 597</p>
-
-<p><strong>Email</strong></p>
-
-<p>support@nuveon.com.au</p>
-
-<p><strong>Website</strong></p>
-
-<p>www.nuveon.com.au</p>
-
-</div>
+    <p><strong>Website</strong></p>
+    <p>www.nuveon.com.au</p>
+  </div>
 
 </div>
 
 <footer>
-
-© NUVEON — Elevate Everyday Living
-
+  © NUVEON — Elevate Everyday Living
 </footer>
 
 </div>
