@@ -4,13 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NUVEON | Elevate Everyday Living</title>
-  <meta name="description" content="NUVEON is a curated discovery store bringing clever, beautifully designed innovations to everyday living." />
+  <meta
+    name="description"
+    content="NUVEON is a curated discovery store bringing smart, beautifully designed innovations to elevate everyday living."
+  />
   <style>
     :root {
-      --charcoal: #1F1F1F;
-      --stone: #D8D2C8;
+      --charcoal: #171717;
+      --stone: #d8d2c8;
+      --sand: #efeae3;
       --white: #ffffff;
-      --soft-text: #5f5a54;
+      --soft-text: #66615a;
+      --line: rgba(23, 23, 23, 0.08);
+      --card-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
+      --radius-lg: 30px;
+      --radius-md: 22px;
+      --max-width: 1240px;
     }
 
     * {
@@ -19,11 +28,22 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: var(--stone);
       color: var(--charcoal);
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      display: block;
+      width: 100%;
     }
 
     a {
@@ -31,24 +51,45 @@
       color: inherit;
     }
 
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
     header {
-      background: var(--stone);
-      padding: 22px 40px;
-      border-bottom: 1px solid rgba(31,31,31,0.08);
       position: sticky;
       top: 0;
+      z-index: 50;
+      background: rgba(216, 210, 200, 0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
     }
 
     .nav {
-      max-width: 1200px;
+      max-width: var(--max-width);
       margin: 0 auto;
+      padding: 20px 40px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      gap: 24px;
     }
 
-    .logo {
-      font-size: 32px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .brand-name {
+      font-size: 28px;
       letter-spacing: 6px;
       font-weight: 300;
     }
@@ -57,189 +98,440 @@
       display: flex;
       gap: 28px;
       font-size: 15px;
+      color: var(--charcoal);
+    }
+
+    .menu a {
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .menu a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: var(--charcoal);
+      transition: width 0.25s ease;
+    }
+
+    .menu a:hover::after {
+      width: 100%;
     }
 
     .hero {
-      background: var(--charcoal);
-      color: var(--white);
-      padding: 110px 40px 90px;
+      padding: 56px 40px 36px;
     }
 
-    .hero-inner {
-      max-width: 1200px;
+    .hero-layout {
+      max-width: var(--max-width);
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-copy {
+      background: linear-gradient(135deg, #181818 0%, #242424 100%);
+      color: var(--white);
+      border-radius: 34px;
+      padding: 64px 56px;
+      box-shadow: var(--card-shadow);
+      min-height: 620px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.72);
+      margin-bottom: 18px;
     }
 
     .hero h1 {
-      font-size: 64px;
-      letter-spacing: 8px;
+      font-size: 72px;
+      line-height: 0.95;
+      letter-spacing: 6px;
       font-weight: 300;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
-    .hero p.tagline {
-      font-size: 20px;
-      letter-spacing: 3px;
-      margin-bottom: 26px;
-      text-transform: uppercase;
-    }
-
-    .hero p.desc {
-      max-width: 700px;
+    .hero .tagline {
       font-size: 18px;
-      color: rgba(255,255,255,0.86);
-      margin-bottom: 36px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.82);
+      margin-bottom: 24px;
+    }
+
+    .hero .desc {
+      max-width: 600px;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.86);
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
     .btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.95;
+    }
+
+    .btn-primary {
       background: var(--stone);
       color: var(--charcoal);
-      padding: 14px 26px;
-      border-radius: 999px;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.24);
+      color: var(--white);
+      background: transparent;
+    }
+
+    .hero-visual {
+      background: var(--sand);
+      border-radius: 34px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--card-shadow);
+      min-height: 620px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-visual-top {
+      position: relative;
+      flex: 1 1 auto;
+      min-height: 430px;
+      overflow: hidden;
+    }
+
+    .hero-visual-top img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-visual-bottom {
+      padding: 28px 30px 30px;
+      background: rgba(255,255,255,0.52);
+    }
+
+    .hero-visual-bottom h3 {
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    .hero-visual-bottom p {
+      color: var(--soft-text);
       font-size: 15px;
-      font-weight: bold;
     }
 
     section {
-      padding: 70px 40px;
+      padding: 34px 40px 0;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      font-size: 34px;
-      font-weight: 300;
-      margin-bottom: 14px;
-      letter-spacing: 1px;
-    }
-
-    .section-intro {
+    .section-head {
       max-width: 760px;
+      margin-bottom: 26px;
+    }
+
+    .section-head h2 {
+      font-size: 38px;
+      line-height: 1.1;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .section-head p {
       color: var(--soft-text);
-      margin-bottom: 36px;
       font-size: 17px;
     }
 
-    .grid-3, .grid-2 {
+    .feature-grid {
       display: grid;
-      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
     }
 
-    .grid-3 {
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
-
-    .grid-2 {
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
-    .card {
-      background: rgba(255,255,255,0.45);
-      border-radius: 22px;
+    .feature-card {
+      background: rgba(255,255,255,0.42);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
       padding: 28px;
-      border: 1px solid rgba(31,31,31,0.08);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.03);
     }
 
-    .card h3 {
+    .feature-card h3 {
       font-size: 22px;
-      margin-bottom: 10px;
       font-weight: 400;
+      margin-bottom: 10px;
     }
 
-    .card p {
+    .feature-card p {
       color: var(--soft-text);
       font-size: 15px;
     }
 
-    .product-card {
-      background: #f4f1ed;
-      border-radius: 24px;
-      padding: 30px;
-      border: 1px solid rgba(31,31,31,0.08);
+    .products {
+      padding-top: 46px;
     }
 
-    .product-card .category {
-      font-size: 12px;
-      letter-spacing: 1.5px;
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .product-card {
+      background: #f5f1ec;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.08);
+    }
+
+    .product-image-wrap {
+      background: #ece6de;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+    }
+
+    .product-image-wrap img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-content {
+      padding: 26px 24px 28px;
+    }
+
+    .product-category {
+      font-size: 11px;
+      letter-spacing: 1.8px;
       text-transform: uppercase;
       color: var(--soft-text);
       margin-bottom: 10px;
     }
 
     .product-card h3 {
-      font-size: 28px;
+      font-size: 24px;
+      line-height: 1.2;
       font-weight: 300;
       margin-bottom: 10px;
     }
 
     .product-card p {
       color: var(--soft-text);
-      margin-bottom: 14px;
+      font-size: 15px;
+      margin-bottom: 16px;
+      min-height: 72px;
     }
 
-    .price {
-      font-size: 22px;
-      font-weight: bold;
-      margin-bottom: 16px;
-      color: var(--charcoal);
+    .product-link {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .split-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 46px;
+    }
+
+    .about-box,
+    .contact-box {
+      border-radius: 30px;
+      padding: 38px;
+      min-height: 100%;
     }
 
     .about-box {
-      background: var(--charcoal);
+      background: linear-gradient(135deg, #1b1b1b 0%, #262626 100%);
       color: var(--white);
-      border-radius: 28px;
-      padding: 40px;
+    }
+
+    .about-box h2,
+    .contact-box h2 {
+      font-size: 34px;
+      font-weight: 300;
+      margin-bottom: 16px;
     }
 
     .about-box p {
-      max-width: 850px;
       color: rgba(255,255,255,0.84);
-      font-size: 17px;
+      font-size: 16px;
+      max-width: 640px;
+    }
+
+    .contact-box {
+      background: rgba(255,255,255,0.42);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.03);
+    }
+
+    .contact-box p {
+      color: var(--soft-text);
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-item {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.6);
+      border: 1px solid rgba(23,23,23,0.06);
+      font-size: 16px;
+    }
+
+    .contact-label {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: var(--soft-text);
+      margin-bottom: 4px;
     }
 
     footer {
-      padding: 36px 40px 50px;
-      border-top: 1px solid rgba(31,31,31,0.08);
-      color: var(--soft-text);
+      padding: 42px 40px 50px;
     }
 
     .footer-inner {
-      max-width: 1200px;
+      max-width: var(--max-width);
       margin: 0 auto;
+      padding-top: 26px;
+      border-top: 1px solid var(--line);
       display: flex;
       justify-content: space-between;
-      gap: 20px;
+      gap: 16px;
       flex-wrap: wrap;
+      color: var(--soft-text);
+      font-size: 14px;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-layout,
+      .split-section,
+      .feature-grid,
+      .product-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy,
+      .hero-visual {
+        min-height: auto;
+      }
+
+      .hero h1 {
+        font-size: 58px;
+      }
     }
 
     @media (max-width: 768px) {
+      header,
+      .hero,
+      section,
+      footer {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .nav {
+        padding: 16px 20px;
+        flex-wrap: wrap;
+      }
+
+      .brand-name {
+        font-size: 22px;
+        letter-spacing: 4px;
+      }
+
       .menu {
         gap: 14px;
         font-size: 13px;
         flex-wrap: wrap;
-        justify-content: flex-end;
+      }
+
+      .hero-copy {
+        padding: 42px 28px;
+        border-radius: 26px;
       }
 
       .hero h1 {
         font-size: 42px;
+        letter-spacing: 3px;
       }
 
-      .hero p.tagline {
+      .hero .tagline {
+        font-size: 14px;
+        letter-spacing: 2px;
+      }
+
+      .hero .desc {
         font-size: 16px;
       }
 
-      .logo {
-        font-size: 24px;
-        letter-spacing: 4px;
+      .hero-visual {
+        border-radius: 26px;
       }
 
-      header, .hero, section, footer {
-        padding-left: 20px;
-        padding-right: 20px;
+      .feature-grid,
+      .product-grid,
+      .split-section {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head h2,
+      .about-box h2,
+      .contact-box h2 {
+        font-size: 30px;
+      }
+
+      .product-card p {
+        min-height: auto;
       }
     }
   </style>
@@ -248,98 +540,253 @@
 
   <header>
     <div class="nav">
-      <div class="logo">NUVEON</div>
+      <a class="brand" href="#top">
+        <img src="assets/images/logo/nuveon-logo.jpg" alt="NUVEON Logo" />
+        <div class="brand-name">NUVEON</div>
+      </a>
+
       <nav class="menu">
-        <a href="#shop">Shop</a>
         <a href="#discover">Discover</a>
+        <a href="#shop">Shop</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <h1>NUVEON</h1>
-      <p class="tagline">Elevate Everyday Living</p>
-      <p class="desc">
-        A curated discovery store bringing clever, beautifully designed innovations to everyday living.
-        Discover smart, practical and modern products that make life easier, cleaner and more enjoyable.
-      </p>
-      <a class="btn" href="#shop">Explore the Collection</a>
-    </div>
-  </section>
-
-  <section id="discover">
-    <div class="container">
-      <h2>Discover Better Living</h2>
-      <p class="section-intro">
-        NUVEON brings together beautiful design, practical technology and thoughtfully selected products
-        that improve daily life in modern Australian homes.
-      </p>
-
-      <div class="grid-3">
-        <div class="card">
-          <h3>New Discoveries</h3>
-          <p>Innovative products not yet common in Australia, selected for design, usefulness and modern appeal.</p>
-        </div>
-        <div class="card">
-          <h3>Smart Home</h3>
-          <p>Clean, functional products that add convenience, hygiene and ease to your everyday routines.</p>
-        </div>
-        <div class="card">
-          <h3>Solar Living</h3>
-          <p>Outdoor and energy-smart lifestyle products designed to create warm, modern spaces with less effort.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="shop">
-    <div class="container">
-      <h2>Featured Products</h2>
-      <p class="section-intro">
-        A first look at some of NUVEON’s curated smart living products.
-      </p>
-
-      <div class="grid-2">
-        <div class="product-card">
-          <div class="category">Smart Home · New Discoveries</div>
-          <h3>Touchless Automatic Soap Dispenser</h3>
-          <p>A sleek touchless soap dispenser designed to bring hygiene, convenience and modern simplicity to everyday living.</p>
-          <div class="price">$49</div>
-          <p>Touchless infrared sensor · Hygienic & safe · Elegant modern design · Easy refill system</p>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <div class="eyebrow">Curated modern living</div>
+          <h1>NUVEON</h1>
+          <p class="tagline">Elevate Everyday Living</p>
+          <p class="desc">
+            Discover smart, practical and beautifully designed products that bring
+            more ease, comfort and modern style into everyday life.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#shop">Explore the Collection</a>
+            <a class="btn btn-secondary" href="#about">Learn About NUVEON</a>
+          </div>
         </div>
 
-        <div class="product-card">
-          <div class="category">Solar Living · New Discoveries</div>
-          <h3>Solar LED Outdoor Wall Light</h3>
-          <p>Elegant solar wall lighting designed to create a warm atmosphere for gardens, balconies and outdoor living spaces.</p>
-          <div class="price">Coming Soon</div>
-          <p>Solar powered · Warm ambient glow · Weather resistant · Easy wall installation</p>
+        <div class="hero-visual">
+          <div class="hero-visual-top">
+            <img
+              src="assets/images/products/nuveon-solar-wall-light.jpg"
+              alt="NUVEON Solar Outdoor Wall Light"
+            />
+          </div>
+          <div class="hero-visual-bottom">
+            <h3>Thoughtful products for modern homes</h3>
+            <p>
+              From smart daily essentials to elegant outdoor living, NUVEON brings
+              together innovation, usefulness and design-led simplicity.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="about">
-    <div class="container">
-      <div class="about-box">
-        <h2>About NUVEON</h2>
-        <p>
-          NUVEON is a curated discovery store focused on intelligent design, practical innovation and
-          beautifully selected products for modern living. Many clever products already exist globally but
-          are not yet common in Australia. Our goal is simple: to bring thoughtful innovations and better
-          everyday experiences into Australian homes.
-        </p>
+    <section id="discover">
+      <div class="container">
+        <div class="section-head">
+          <h2>Discover Better Living</h2>
+          <p>
+            NUVEON brings together thoughtful design, practical innovation and
+            everyday usefulness for modern Australian living.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Smart Living</h3>
+            <p>
+              Clean, modern and functional products designed to make daily routines
+              simpler, tidier and more convenient.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3>Solar Living</h3>
+            <p>
+              Elegant outdoor lifestyle pieces that add warmth, atmosphere and
+              practical value to your home.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3>Curated Discoveries</h3>
+            <p>
+              Distinctive finds chosen for their design appeal, usefulness and
+              fresh relevance to contemporary living.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer id="contact">
+    <section id="shop" class="products">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured Products</h2>
+          <p>
+            A refined first collection of smart, practical and beautifully selected
+            products for home, travel and lifestyle.
+          </p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img
+                src="assets/images/products/nuveon-solar-wall-light.jpg"
+                alt="Solar Outdoor Wall Light"
+              />
+            </div>
+            <div class="product-content">
+              <div class="product-category">Solar Living</div>
+              <h3>Solar Outdoor Wall Light</h3>
+              <p>
+                Elegant wall lighting designed to create a warm, modern atmosphere
+                for gardens, balconies and outdoor spaces.
+              </p>
+              <div class="product-link">Discover More</div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img
+                src="assets/images/products/nuveon-touchless-soap-dispenser.jpg"
+                alt="Touchless Automatic Soap Dispenser"
+              />
+            </div>
+            <div class="product-content">
+              <div class="product-category">Smart Living</div>
+              <h3>Touchless Automatic Soap Dispenser</h3>
+              <p>
+                A sleek touchless essential that brings cleaner, more convenient
+                and more modern handwashing into everyday life.
+              </p>
+              <div class="product-link">Discover More</div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img
+                src="assets/images/products/nuveon-faucet-sensor-adapter.jpg"
+                alt="Touchless Smart Faucet Sensor Adapter"
+              />
+            </div>
+            <div class="product-content">
+              <div class="product-category">Smart Living</div>
+              <h3>Smart Faucet Sensor Adapter</h3>
+              <p>
+                Upgrade a standard tap with touchless convenience for a more
+                hygienic and efficient kitchen or bathroom experience.
+              </p>
+              <div class="product-link">Discover More</div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img
+                src="assets/images/products/nuveon-diy-dollhouse.jpg"
+                alt="DIY Miniature Dollhouse Kit"
+              />
+            </div>
+            <div class="product-content">
+              <div class="product-category">Kids & DIY</div>
+              <h3>DIY Miniature Dollhouse Kit</h3>
+              <p>
+                A creative hands-on build that combines imagination, decoration
+                and the joy of making something beautiful from scratch.
+              </p>
+              <div class="product-link">Discover More</div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img
+                src="assets/images/products/nuveon-travel-cotton-towel.jpg"
+                alt="Compressed Travel Cotton Towel"
+              />
+            </div>
+            <div class="product-content">
+              <div class="product-category">Travel & Camping</div>
+              <h3>Compressed Travel Cotton Towel</h3>
+              <p>
+                Compact, convenient and easy to carry, this travel-ready essential
+                is ideal for everyday use, trips and outdoor adventures.
+              </p>
+              <div class="product-link">Discover More</div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img
+                src="assets/images/products/nuveon-automatic-toothpaste-dispenser.jpg"
+                alt="Touchless Automatic Toothpaste Dispenser"
+              />
+            </div>
+            <div class="product-content">
+              <div class="product-category">Smart Living</div>
+              <h3>Automatic Toothpaste Dispenser</h3>
+              <p>
+                A neat and practical bathroom upgrade designed to keep routines
+                cleaner, simpler and easier for the whole family.
+              </p>
+              <div class="product-link">Discover More</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="split-section">
+          <div class="about-box" id="about">
+            <h2>About NUVEON</h2>
+            <p>
+              NUVEON is a curated discovery store focused on intelligent design,
+              practical innovation and beautifully selected products for modern
+              living. Our goal is to introduce thoughtful, design-led finds that
+              elevate everyday routines and bring more ease and enjoyment into the
+              home.
+            </p>
+          </div>
+
+          <div class="contact-box" id="contact">
+            <h2>Contact</h2>
+            <p>
+              For product enquiries, support or collaboration, please get in touch.
+            </p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <span class="contact-label">Phone</span>
+                0434 198 597
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">Email</span>
+                support@nuveon.com.au
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">Website</span>
+                www.nuveon.com.au
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
     <div class="footer-inner">
       <div>© 2026 NUVEON. All rights reserved.</div>
-      <div>Contact: hello@nuveon.com.au</div>
+      <div>Elevate Everyday Living</div>
     </div>
   </footer>
 
