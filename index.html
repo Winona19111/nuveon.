@@ -11,13 +11,19 @@
   <style>
     :root {
       --charcoal: #171717;
+      --charcoal-2: #222222;
       --stone: #d8d2c8;
       --sand: #efeae3;
+      --cream: #f7f4ef;
       --white: #ffffff;
-      --soft-text: #66615a;
+      --soft-text: #6b645c;
+      --soft-text-2: #857d74;
       --line: rgba(23, 23, 23, 0.08);
-      --card-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
-      --radius-lg: 30px;
+      --line-soft: rgba(255, 255, 255, 0.12);
+      --shadow: 0 22px 50px rgba(0, 0, 0, 0.07);
+      --shadow-soft: 0 12px 28px rgba(0, 0, 0, 0.04);
+      --radius-xl: 34px;
+      --radius-lg: 28px;
       --radius-md: 22px;
       --max-width: 1240px;
     }
@@ -59,9 +65,9 @@
     header {
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 100;
       background: rgba(216, 210, 200, 0.88);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
     }
 
@@ -76,34 +82,37 @@
     }
 
     .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .brand img {
-      width: 42px;
-      height: 42px;
-      object-fit: contain;
-      border-radius: 10px;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
     }
 
     .brand-name {
-      font-size: 28px;
-      letter-spacing: 6px;
+      font-size: 33px;
+      line-height: 1;
+      letter-spacing: 8px;
       font-weight: 300;
+    }
+
+    .brand-tagline {
+      font-size: 10px;
+      letter-spacing: 2.3px;
+      text-transform: uppercase;
+      color: var(--soft-text);
     }
 
     .menu {
       display: flex;
+      align-items: center;
       gap: 28px;
-      font-size: 15px;
-      color: var(--charcoal);
+      font-size: 14px;
     }
 
     .menu a {
       position: relative;
-      padding-bottom: 2px;
+      color: var(--charcoal);
+      padding-bottom: 3px;
     }
 
     .menu a::after {
@@ -122,59 +131,60 @@
     }
 
     .hero {
-      padding: 56px 40px 36px;
+      padding: 54px 40px 24px;
     }
 
     .hero-layout {
       max-width: var(--max-width);
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: 1.02fr 0.98fr;
       gap: 28px;
       align-items: stretch;
     }
 
     .hero-copy {
-      background: linear-gradient(135deg, #181818 0%, #242424 100%);
-      color: var(--white);
-      border-radius: 34px;
-      padding: 64px 56px;
-      box-shadow: var(--card-shadow);
       min-height: 620px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #151515 0%, #232323 55%, #1a1a1a 100%);
+      color: var(--white);
+      padding: 72px 58px;
+      box-shadow: var(--shadow);
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
     .eyebrow {
-      font-size: 12px;
-      letter-spacing: 2.4px;
+      font-size: 11px;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.72);
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      font-size: 72px;
-      line-height: 0.95;
-      letter-spacing: 6px;
-      font-weight: 300;
+      color: rgba(255, 255, 255, 0.68);
       margin-bottom: 22px;
     }
 
+    .hero h1 {
+      font-size: 76px;
+      line-height: 0.92;
+      letter-spacing: 7px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
     .hero .tagline {
-      font-size: 18px;
-      letter-spacing: 3px;
+      font-size: 17px;
+      letter-spacing: 4px;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.82);
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
 
     .hero .desc {
-      max-width: 600px;
+      max-width: 510px;
       font-size: 18px;
-      color: rgba(255, 255, 255, 0.86);
-      margin-bottom: 34px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.84);
+      margin-bottom: 36px;
     }
 
     .hero-actions {
@@ -187,18 +197,17 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
+      min-height: 50px;
       padding: 0 24px;
       border-radius: 999px;
       font-size: 14px;
       font-weight: 700;
-      letter-spacing: 0.2px;
-      transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+      transition: transform 0.2s ease, background 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
     }
 
     .btn:hover {
       transform: translateY(-1px);
-      opacity: 0.95;
+      opacity: 0.96;
     }
 
     .btn-primary {
@@ -207,70 +216,90 @@
     }
 
     .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.24);
-      color: var(--white);
       background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.22);
     }
 
     .hero-visual {
-      background: var(--sand);
-      border-radius: 34px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      box-shadow: var(--card-shadow);
-      min-height: 620px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .hero-visual-top {
       position: relative;
-      flex: 1 1 auto;
-      min-height: 430px;
+      min-height: 620px;
+      border-radius: var(--radius-xl);
       overflow: hidden;
+      box-shadow: var(--shadow);
+      background: #d7d1c7;
     }
 
-    .hero-visual-top img {
+    .hero-visual img {
       height: 100%;
       object-fit: cover;
     }
 
-    .hero-visual-bottom {
-      padding: 28px 30px 30px;
-      background: rgba(255,255,255,0.52);
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.04) 0%,
+        rgba(0, 0, 0, 0.12) 42%,
+        rgba(0, 0, 0, 0.50) 100%
+      );
+      display: flex;
+      align-items: flex-end;
+      padding: 34px;
     }
 
-    .hero-visual-bottom h3 {
-      font-size: 24px;
-      font-weight: 400;
-      margin-bottom: 8px;
+    .hero-overlay-content {
+      max-width: 420px;
+      color: var(--white);
     }
 
-    .hero-visual-bottom p {
-      color: var(--soft-text);
+    .hero-overlay-kicker {
+      font-size: 10px;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 10px;
+    }
+
+    .hero-overlay h3 {
+      font-size: 32px;
+      line-height: 1.1;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+
+    .hero-overlay p {
       font-size: 15px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.84);
     }
 
     section {
-      padding: 34px 40px 0;
+      padding: 0 40px;
+    }
+
+    .discover {
+      padding-top: 64px;
     }
 
     .section-head {
-      max-width: 760px;
-      margin-bottom: 26px;
+      max-width: 720px;
+      margin-bottom: 28px;
     }
 
     .section-head h2 {
-      font-size: 38px;
-      line-height: 1.1;
+      font-size: 44px;
+      line-height: 1.08;
       font-weight: 300;
-      letter-spacing: 0.5px;
       margin-bottom: 12px;
+      letter-spacing: 0.2px;
     }
 
     .section-head p {
-      color: var(--soft-text);
       font-size: 17px;
+      color: var(--soft-text);
+      line-height: 1.8;
     }
 
     .feature-grid {
@@ -280,26 +309,38 @@
     }
 
     .feature-card {
-      background: rgba(255,255,255,0.42);
-      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.34);
+      border: 1px solid rgba(23, 23, 23, 0.06);
       border-radius: var(--radius-md);
-      padding: 28px;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.03);
+      padding: 32px 28px;
+      box-shadow: var(--shadow-soft);
+      min-height: 188px;
+    }
+
+    .feature-card-kicker {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--soft-text-2);
+      margin-bottom: 12px;
     }
 
     .feature-card h3 {
-      font-size: 22px;
-      font-weight: 400;
+      font-size: 24px;
+      font-weight: 300;
       margin-bottom: 10px;
+      line-height: 1.2;
     }
 
     .feature-card p {
-      color: var(--soft-text);
       font-size: 15px;
+      line-height: 1.8;
+      color: var(--soft-text);
+      max-width: 320px;
     }
 
     .products {
-      padding-top: 46px;
+      padding-top: 56px;
     }
 
     .product-grid {
@@ -309,17 +350,17 @@
     }
 
     .product-card {
-      background: #f5f1ec;
-      border: 1px solid var(--line);
-      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.50);
+      border: 1px solid rgba(23, 23, 23, 0.06);
+      border-radius: var(--radius-lg);
       overflow: hidden;
-      box-shadow: var(--card-shadow);
+      box-shadow: var(--shadow-soft);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .product-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.08);
     }
 
     .product-image-wrap {
@@ -334,115 +375,150 @@
     }
 
     .product-content {
-      padding: 26px 24px 28px;
+      padding: 24px 24px 26px;
     }
 
     .product-category {
-      font-size: 11px;
-      letter-spacing: 1.8px;
+      font-size: 10px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--soft-text);
+      color: var(--soft-text-2);
       margin-bottom: 10px;
     }
 
     .product-card h3 {
-      font-size: 24px;
+      font-size: 22px;
       line-height: 1.2;
       font-weight: 300;
       margin-bottom: 10px;
     }
 
     .product-card p {
-      color: var(--soft-text);
       font-size: 15px;
+      line-height: 1.75;
+      color: var(--soft-text);
       margin-bottom: 16px;
-      min-height: 72px;
+      min-height: 80px;
     }
 
     .product-link {
       font-size: 14px;
       font-weight: 700;
-      letter-spacing: 0.2px;
     }
 
     .split-section {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
-      margin-top: 46px;
-    }
-
-    .about-box,
-    .contact-box {
-      border-radius: 30px;
-      padding: 38px;
-      min-height: 100%;
+      margin-top: 56px;
     }
 
     .about-box {
-      background: linear-gradient(135deg, #1b1b1b 0%, #262626 100%);
+      border-radius: 30px;
+      padding: 44px 40px;
+      background: linear-gradient(135deg, #171717 0%, #252525 100%);
       color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .about-box .small-label,
+    .contact-box .small-label {
+      font-size: 10px;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .about-box .small-label {
+      color: rgba(255, 255, 255, 0.66);
+    }
+
+    .contact-box .small-label {
+      color: var(--soft-text-2);
     }
 
     .about-box h2,
     .contact-box h2 {
-      font-size: 34px;
+      font-size: 40px;
+      line-height: 1.08;
       font-weight: 300;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .about-box p {
-      color: rgba(255,255,255,0.84);
-      font-size: 16px;
-      max-width: 640px;
+      max-width: 620px;
+      font-size: 17px;
+      line-height: 1.9;
+      color: rgba(255, 255, 255, 0.84);
     }
 
     .contact-box {
-      background: rgba(255,255,255,0.42);
-      border: 1px solid var(--line);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.03);
+      border-radius: 30px;
+      padding: 44px 40px;
+      background: rgba(255, 255, 255, 0.30);
+      border: 1px solid rgba(23, 23, 23, 0.06);
+      box-shadow: var(--shadow-soft);
     }
 
-    .contact-box p {
+    .contact-intro {
+      font-size: 16px;
+      line-height: 1.8;
       color: var(--soft-text);
-      font-size: 16px;
-      margin-bottom: 20px;
+      margin-bottom: 28px;
+      max-width: 480px;
     }
 
-    .contact-list {
+    .contact-minimal {
       display: grid;
-      gap: 14px;
+      gap: 18px;
     }
 
-    .contact-item {
-      padding: 16px 18px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.6);
-      border: 1px solid rgba(23,23,23,0.06);
-      font-size: 16px;
+    .contact-row {
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(23, 23, 23, 0.08);
+    }
+
+    .contact-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
     }
 
     .contact-label {
       display: block;
-      font-size: 11px;
+      font-size: 10px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      letter-spacing: 1.4px;
-      color: var(--soft-text);
-      margin-bottom: 4px;
+      color: var(--soft-text-2);
+      margin-bottom: 6px;
+    }
+
+    .contact-value {
+      font-size: 22px;
+      line-height: 1.4;
+      font-weight: 300;
+      word-break: break-word;
+    }
+
+    .brand-closing {
+      margin-top: 28px;
+      font-size: 14px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--soft-text-2);
     }
 
     footer {
-      padding: 42px 40px 50px;
+      padding: 46px 40px 52px;
     }
 
     .footer-inner {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding-top: 26px;
+      padding-top: 24px;
       border-top: 1px solid var(--line);
       display: flex;
       justify-content: space-between;
-      gap: 16px;
+      gap: 18px;
       flex-wrap: wrap;
       color: var(--soft-text);
       font-size: 14px;
@@ -466,7 +542,7 @@
       }
 
       .hero h1 {
-        font-size: 58px;
+        font-size: 60px;
       }
     }
 
@@ -485,29 +561,34 @@
       }
 
       .brand-name {
-        font-size: 22px;
-        letter-spacing: 4px;
+        font-size: 26px;
+        letter-spacing: 6px;
+      }
+
+      .brand-tagline {
+        font-size: 9px;
+        letter-spacing: 1.8px;
       }
 
       .menu {
         gap: 14px;
-        font-size: 13px;
         flex-wrap: wrap;
+        font-size: 13px;
       }
 
       .hero-copy {
-        padding: 42px 28px;
+        padding: 44px 28px;
         border-radius: 26px;
       }
 
       .hero h1 {
-        font-size: 42px;
-        letter-spacing: 3px;
+        font-size: 44px;
+        letter-spacing: 4px;
       }
 
       .hero .tagline {
-        font-size: 14px;
-        letter-spacing: 2px;
+        font-size: 13px;
+        letter-spacing: 2.2px;
       }
 
       .hero .desc {
@@ -515,7 +596,22 @@
       }
 
       .hero-visual {
+        min-height: 480px;
         border-radius: 26px;
+      }
+
+      .hero-overlay {
+        padding: 24px;
+      }
+
+      .hero-overlay h3 {
+        font-size: 26px;
+      }
+
+      .section-head h2,
+      .about-box h2,
+      .contact-box h2 {
+        font-size: 32px;
       }
 
       .feature-grid,
@@ -524,14 +620,12 @@
         grid-template-columns: 1fr;
       }
 
-      .section-head h2,
-      .about-box h2,
-      .contact-box h2 {
-        font-size: 30px;
-      }
-
       .product-card p {
         min-height: auto;
+      }
+
+      .contact-value {
+        font-size: 18px;
       }
     }
   </style>
@@ -540,9 +634,9 @@
 
   <header>
     <div class="nav">
-      <a class="brand" href="#top">
-        <img src="assets/images/logo/nuveon-logo.jpg" alt="NUVEON Logo" />
+      <a class="brand" href="#top" aria-label="NUVEON home">
         <div class="brand-name">NUVEON</div>
+        <div class="brand-tagline">Elevate Everyday Living</div>
       </a>
 
       <nav class="menu">
@@ -572,24 +666,25 @@
         </div>
 
         <div class="hero-visual">
-          <div class="hero-visual-top">
-            <img
-              src="assets/images/products/nuveon-solar-wall-light.jpg"
-              alt="NUVEON Solar Outdoor Wall Light"
-            />
-          </div>
-          <div class="hero-visual-bottom">
-            <h3>Thoughtful products for modern homes</h3>
-            <p>
-              From smart daily essentials to elegant outdoor living, NUVEON brings
-              together innovation, usefulness and design-led simplicity.
-            </p>
+          <img
+            src="assets/images/products/nuveon-solar-wall-light.jpg"
+            alt="NUVEON Solar Outdoor Wall Light"
+          />
+          <div class="hero-overlay">
+            <div class="hero-overlay-content">
+              <div class="hero-overlay-kicker">Featured discovery</div>
+              <h3>Thoughtful products for modern homes</h3>
+              <p>
+                From smart daily essentials to elegant outdoor living, NUVEON brings
+                together innovation, usefulness and design-led simplicity.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="discover">
+    <section id="discover" class="discover">
       <div class="container">
         <div class="section-head">
           <h2>Discover Better Living</h2>
@@ -601,24 +696,29 @@
 
         <div class="feature-grid">
           <div class="feature-card">
+            <div class="feature-card-kicker">Category</div>
             <h3>Smart Living</h3>
             <p>
-              Clean, modern and functional products designed to make daily routines
-              simpler, tidier and more convenient.
+              Clean, modern essentials designed to make daily routines simpler,
+              tidier and more convenient.
             </p>
           </div>
+
           <div class="feature-card">
+            <div class="feature-card-kicker">Category</div>
             <h3>Solar Living</h3>
             <p>
-              Elegant outdoor lifestyle pieces that add warmth, atmosphere and
-              practical value to your home.
+              Elegant outdoor pieces that add warmth, atmosphere and practical value
+              to modern homes.
             </p>
           </div>
+
           <div class="feature-card">
+            <div class="feature-card-kicker">Category</div>
             <h3>Curated Discoveries</h3>
             <p>
-              Distinctive finds chosen for their design appeal, usefulness and
-              fresh relevance to contemporary living.
+              Distinctive finds selected for design appeal, usefulness and fresh
+              relevance to contemporary living.
             </p>
           </div>
         </div>
@@ -647,8 +747,7 @@
               <div class="product-category">Solar Living</div>
               <h3>Solar Outdoor Wall Light</h3>
               <p>
-                Elegant wall lighting designed to create a warm, modern atmosphere
-                for gardens, balconies and outdoor spaces.
+                Ambient solar lighting for a refined outdoor atmosphere.
               </p>
               <div class="product-link">Discover More</div>
             </div>
@@ -658,15 +757,14 @@
             <div class="product-image-wrap">
               <img
                 src="assets/images/products/nuveon-touchless-soap-dispenser.jpg"
-                alt="Touchless Automatic Soap Dispenser"
+                alt="Touchless Soap Dispenser"
               />
             </div>
             <div class="product-content">
               <div class="product-category">Smart Living</div>
-              <h3>Touchless Automatic Soap Dispenser</h3>
+              <h3>Touchless Soap Dispenser</h3>
               <p>
-                A sleek touchless essential that brings cleaner, more convenient
-                and more modern handwashing into everyday life.
+                Touchless, elegant and designed for a cleaner daily routine.
               </p>
               <div class="product-link">Discover More</div>
             </div>
@@ -676,15 +774,14 @@
             <div class="product-image-wrap">
               <img
                 src="assets/images/products/nuveon-faucet-sensor-adapter.jpg"
-                alt="Touchless Smart Faucet Sensor Adapter"
+                alt="Faucet Sensor Adapter"
               />
             </div>
             <div class="product-content">
               <div class="product-category">Smart Living</div>
-              <h3>Smart Faucet Sensor Adapter</h3>
+              <h3>Faucet Sensor Adapter</h3>
               <p>
-                Upgrade a standard tap with touchless convenience for a more
-                hygienic and efficient kitchen or bathroom experience.
+                A sleek touchless upgrade for a cleaner kitchen or bathroom.
               </p>
               <div class="product-link">Discover More</div>
             </div>
@@ -701,8 +798,7 @@
               <div class="product-category">Kids & DIY</div>
               <h3>DIY Miniature Dollhouse Kit</h3>
               <p>
-                A creative hands-on build that combines imagination, decoration
-                and the joy of making something beautiful from scratch.
+                A creative build designed to inspire imagination and making.
               </p>
               <div class="product-link">Discover More</div>
             </div>
@@ -719,8 +815,7 @@
               <div class="product-category">Travel & Camping</div>
               <h3>Compressed Travel Cotton Towel</h3>
               <p>
-                Compact, convenient and easy to carry, this travel-ready essential
-                is ideal for everyday use, trips and outdoor adventures.
+                A compact travel essential that expands into comfort anywhere.
               </p>
               <div class="product-link">Discover More</div>
             </div>
@@ -730,15 +825,14 @@
             <div class="product-image-wrap">
               <img
                 src="assets/images/products/nuveon-automatic-toothpaste-dispenser.jpg"
-                alt="Touchless Automatic Toothpaste Dispenser"
+                alt="Automatic Toothpaste Dispenser"
               />
             </div>
             <div class="product-content">
               <div class="product-category">Smart Living</div>
               <h3>Automatic Toothpaste Dispenser</h3>
               <p>
-                A neat and practical bathroom upgrade designed to keep routines
-                cleaner, simpler and easier for the whole family.
+                A neat bathroom upgrade for a cleaner and simpler routine.
               </p>
               <div class="product-link">Discover More</div>
             </div>
@@ -747,34 +841,38 @@
 
         <div class="split-section">
           <div class="about-box" id="about">
+            <div class="small-label">About</div>
             <h2>About NUVEON</h2>
             <p>
               NUVEON is a curated discovery store focused on intelligent design,
-              practical innovation and beautifully selected products for modern
-              living. Our goal is to introduce thoughtful, design-led finds that
-              elevate everyday routines and bring more ease and enjoyment into the
-              home.
+              practical innovation and beautifully selected finds for modern living.
+              We introduce thoughtful, design-led products that elevate everyday
+              routines with greater ease, usefulness and style.
             </p>
+            <div class="brand-closing">Thoughtfully chosen. Beautifully useful.</div>
           </div>
 
           <div class="contact-box" id="contact">
-            <h2>Contact</h2>
-            <p>
-              For product enquiries, support or collaboration, please get in touch.
+            <div class="small-label">Contact</div>
+            <h2>Get in Touch</h2>
+            <p class="contact-intro">
+              For product enquiries, support or collaboration, please contact NUVEON.
             </p>
 
-            <div class="contact-list">
-              <div class="contact-item">
+            <div class="contact-minimal">
+              <div class="contact-row">
                 <span class="contact-label">Phone</span>
-                0434 198 597
+                <div class="contact-value">0434 198 597</div>
               </div>
-              <div class="contact-item">
+
+              <div class="contact-row">
                 <span class="contact-label">Email</span>
-                support@nuveon.com.au
+                <div class="contact-value">support@nuveon.com.au</div>
               </div>
-              <div class="contact-item">
+
+              <div class="contact-row">
                 <span class="contact-label">Website</span>
-                www.nuveon.com.au
+                <div class="contact-value">www.nuveon.com.au</div>
               </div>
             </div>
           </div>
