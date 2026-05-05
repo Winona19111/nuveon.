@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NUVEON | Elevate Everyday Living</title>
-<link rel="icon" type="image/png" href="favicon.png">
 <style>
 :root{
   --charcoal:#1F1F1F;
@@ -26,29 +25,24 @@ nav a{ margin-left:28px; text-decoration:none; color:var(--charcoal); font-size:
 .hero-left h1{ font-size:48px; letter-spacing:4px; margin-bottom:15px; }
 .hero-left p{ color:#c9c9c9; margin-bottom:30px; }
 .btn{ display:inline-block; padding:12px 24px; border-radius:25px; background:white; color:black; text-decoration:none; font-size:14px; transition:0.25s; }
-.hero-img img{ width:100%; height:100%; min-height:420px; object-fit:cover; border-radius:20px; display:block; }
+.hero-img { background: #555; border-radius: 20px; min-height: 300px; display: flex; align-items: center; justify-content: center; color: white; }
 .section{ margin-top:70px; }
 .section h2{ font-size:30px; margin-bottom:25px; text-align: center; letter-spacing: 2px; }
-.grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:25px; }
+.grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:25px; }
 .card{ background:white; border-radius:16px; overflow:hidden; transition:0.3s; display:flex; flex-direction:column; }
 .card:hover{ transform:translateY(-6px); box-shadow:0 15px 40px rgba(0,0,0,0.1); }
-.card-image{ width:100%; aspect-ratio:1/1; overflow:hidden; background:#f5f5f5; }
+.card-image{ width:100%; aspect-ratio:1/1; overflow:hidden; background:#eee; }
 .card-image img{ width:100%; height:100%; object-fit:cover; display:block; }
 .card-content{ padding:20px; display:flex; flex-direction:column; flex-grow:1; }
-.card-content h3{ font-size:17px; margin-bottom:8px; line-height:1.3; min-height:44px; }
-.price{ font-size:20px; font-weight:700; margin:5px 0 15px; color:var(--charcoal); }
-.card-actions{ margin-top:auto; display: flex; gap: 10px; }
-.link-btn{ flex:1; text-align:center; padding:10px; border-radius:24px; background:#121212; color:white; text-decoration:none; font-size:13px; transition:0.25s; }
+.card-content h3{ font-size:16px; margin-bottom:8px; line-height:1.3; min-height:42px; }
+.price{ font-size:18px; font-weight:700; margin:5px 0 15px; color:var(--charcoal); }
+.card-actions{ margin-top:auto; display: flex; gap: 8px; }
+.link-btn{ flex:1; text-align:center; padding:10px; border-radius:24px; background:#121212; color:white; text-decoration:none; font-size:12px; transition:0.25s; }
 .link-btn.buy-now { background: #2e7d32; }
-.link-btn:hover{ opacity:0.85; }
-.about-footer-wrap { margin-top: 80px; border-top: 1px solid var(--line); padding-top: 60px; }
-.about{ display:grid; grid-template-columns:1fr 1fr; gap:30px; }
-.about-box{ background:#1a1a1a; color:white; padding:40px; border-radius:16px; }
-.contact{ background:white; padding:40px; border-radius:16px; }
 .legal-nav { text-align: center; margin-top: 40px; }
 .legal-nav a { color: var(--soft); text-decoration: none; font-size: 13px; margin: 0 10px; }
-footer{ text-align:center; padding:20px 40px 40px; color:#777; font-size:13px; }
-@media(max-width:900px){ .hero{ grid-template-columns:1fr; } .grid{ grid-template-columns:1fr; } .about{ grid-template-columns:1fr; } }
+footer{ text-align:center; padding:40px; color:#777; font-size:13px; }
+@media(max-width:900px){ .hero{ grid-template-columns:1fr; } .grid{ grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
@@ -57,7 +51,6 @@ footer{ text-align:center; padding:20px 40px 40px; color:#777; font-size:13px; }
   <div class="logo">NUVEON</div>
   <nav>
     <a href="#products">Shop</a>
-    <a href="#about">About</a>
   </nav>
 </header>
 
@@ -67,9 +60,7 @@ footer{ text-align:center; padding:20px 40px 40px; color:#777; font-size:13px; }
     <p>Smart, practical and beautifully designed products for your home and garden.</p>
     <a class="btn" href="#products">Shop Collection</a>
   </div>
-  <div class="hero-img">
-    <img src="assets/images/hero/nuveon-hero-modern-smart-home.jpg" alt="NUVEON Lifestyle">
-  </div>
+  <div class="hero-img">Hero Image Area</div>
 </div>
 
 <div class="section" id="products">
@@ -78,24 +69,24 @@ footer{ text-align:center; padding:20px 40px 40px; color:#777; font-size:13px; }
     
     <!-- 1. Toilet Flush Kit -->
     <div class="card">
-      <div class="card-image"><img src="assets/images/products/nuveon-hygienicflow-touchless-toilet-flush-kit.jpg" alt="Toilet Flush Kit"></div>
+      <div class="card-image"><img src="nuveon-hygienicflow-touchless-toilet-flush-kit.jpg" alt="Toilet Flush Kit"></div>
       <div class="card-content">
         <h3>HygienicFlow Touchless Toilet Flush Kit</h3>
         <div class="price">$79</div>
         <div class="card-actions">
-          <a class="link-btn" href="products/nuveon-hygienicflow-touchless-toilet-flush-kit.html">Details</a>
+          <a class="link-btn" href="nuveon-hygienicflow-touchless-toilet-flush-kit.html">Details</a>
         </div>
       </div>
     </div>
 
     <!-- 2. Soap Dispenser -->
     <div class="card">
-      <div class="card-image"><img src="assets/images/products/nuveon-touchless-soap-dispenser.jpg" alt="Soap Dispenser"></div>
+      <div class="card-image"><img src="nuveon-touchless-soap-dispenser.jpg" alt="Soap Dispenser"></div>
       <div class="card-content">
         <h3>Touchless Automatic Soap Dispenser</h3>
         <div class="price">$89</div>
         <div class="card-actions">
-          <a class="link-btn" href="products/nuveon-touchless-automatic-soap-dispenser.html">Details</a>
+          <a class="link-btn" href="nuveon-touchless-automatic-soap-dispenser.html">Details</a>
           <a class="link-btn buy-now" href="https://buy.stripe.com/test_8x23cv0RY91ggw92OGe3e00">Buy Now</a>
         </div>
       </div>
@@ -103,120 +94,120 @@ footer{ text-align:center; padding:20px 40px 40px; color:#777; font-size:13px; }
 
     <!-- 3. Faucet Sensor -->
     <div class="card">
-      <div class="card-image"><img src="assets/images/products/nuveon-faucet-sensor-adapter.jpg" alt="Faucet Sensor"></div>
+      <div class="card-image"><img src="nuveon-faucet-sensor-adapter.jpg" alt="Faucet Sensor"></div>
       <div class="card-content">
         <h3>Touchless Smart Faucet Sensor Adapter</h3>
         <div class="price">$49</div>
         <div class="card-actions">
-          <a class="link-btn" href="products/nuveon-touchless-smart-faucet-sensor-adapter.html">Details</a>
+          <a class="link-btn" href="nuveon-touchless-smart-faucet-sensor-adapter.html">Details</a>
         </div>
       </div>
     </div>
 
     <!-- 4. Toothpaste Dispenser -->
     <div class="card">
-      <div class="card-image"><img src="assets/images/products/nuveon-automatic-toothpaste-dispenser.jpg" alt="Toothpaste Dispenser"></div>
+      <div class="card-image"><img src="nuveon-automatic-toothpaste-dispenser.jpg" alt="Toothpaste Dispenser"></div>
       <div class="card-content">
         <h3>Touchless Automatic Toothpaste Dispenser</h3>
         <div class="price">$39</div>
         <div class="card-actions">
-          <a class="link-btn" href="products/nuveon-touchless-automatic-toothpaste-dispenser.html">Details</a>
+          <a class="link-btn" href="nuveon-touchless-automatic-toothpaste-dispenser.html">Details</a>
         </div>
       </div>
     </div>
 
     <!-- 5. Salt & Pepper Grinder -->
     <div class="card">
-      <div class="card-image"><img src="assets/images/products/nuveon-electric-automatic-salt-pepper-grinder.jpg" alt="Grinder"></div>
+      <div class="card-image"><img src="nuveon-electric-automatic-salt-pepper-grinder.jpg" alt="Grinder"></div>
       <div class="card-content">
         <h3>Electric Automatic Salt & Pepper Grinder</h3>
         <div class="price">$45</div>
         <div class="card-actions">
-          <a class="link-btn" href="products/nuveon-electric-automatic-salt-pepper-grinder.html">Details</a>
+          <a class="link-btn" href="nuveon-electric-automatic-salt-pepper-grinder.html">Details</a>
         </div>
       </div>
     </div>
 
     <!-- 6. Bee String Lights -->
     <div class="card">
-      <div class="card-image"><img src="assets/images/products/nuveon-auraglow-solar-bee-string-lights.jpg" alt="Bee Lights"></div>
+      <div class="card-image"><img src="nuveon-auraglow-solar-bee-string-lights.jpg" alt="Bee Lights"></div>
       <div class="card-content">
         <h3>AuraGlow Solar Bee String Lights</h3>
         <div class="price">$29</div>
         <div class="card-actions">
-          <a class="link-btn" href="products/nuveon-auraglow-solar-bee-string-lights.html">Details</a>
+          <a class="link-btn" href="nuveon-auraglow-solar-bee-string-lights.html">Details</a>
         </div>
       </div>
     </div>
 
     <!-- 7. Firefly Garden Lights -->
     <div class="card">
-      <div class="card-image"><img src="assets/images/products/nuveon-solar-firefly-garden-lights.jpg" alt="Firefly Lights"></div>
+      <div class="card-image"><img src="nuveon-solar-firefly-garden-lights.jpg" alt="Firefly Lights"></div>
       <div class="card-content">
         <h3>AuraGlow Solar Firefly Garden Lights</h3>
         <div class="price">$35</div>
         <div class="card-actions">
-          <a class="link-btn" href="products/nuveon-auraglow-solar-firefly-garden-lights.html">Details</a>
+          <a class="link-btn" href="nuveon-auraglow-solar-firefly-garden-lights.html">Details</a>
         </div>
       </div>
     </div>
 
     <!-- 8. Solar Motion LED Light -->
     <div class="card">
-      <div class="card-image"><img src="assets/images/products/nuveon-solar-motion-sensor-led-light.jpg" alt="Solar Motion Light"></div>
+      <div class="card-image"><img src="nuveon-solar-motion-sensor-led-light.jpg" alt="Solar Motion Light"></div>
       <div class="card-content">
         <h3>Solar Motion Sensor LED Light</h3>
         <div class="price">$39</div>
         <div class="card-actions">
-          <a class="link-btn" href="products/nuveon-solar-motion-sensor-led-light.html">Details</a>
+          <a class="link-btn" href="nuveon-solar-motion-sensor-led-light.html">Details</a>
         </div>
       </div>
     </div>
 
     <!-- 9. Solar Wall Light -->
     <div class="card">
-      <div class="card-image"><img src="assets/images/products/nuveon-solar-wall-light.jpg" alt="Solar Wall Light"></div>
+      <div class="card-image"><img src="nuveon-solar-wall-light.jpg" alt="Solar Wall Light"></div>
       <div class="card-content">
         <h3>Solar LED Outdoor Wall Light</h3>
         <div class="price">$49</div>
         <div class="card-actions">
-          <a class="link-btn" href="products/nuveon-solar-wall-light.html">Details</a>
+          <a class="link-btn" href="nuveon-solar-led-outdoor-wall-light.html">Details</a>
         </div>
       </div>
     </div>
 
     <!-- 10. Decorative LED Wall Light -->
     <div class="card">
-      <div class="card-image"><img src="assets/images/products/nuveon-motion-sensor-decorative-wall-light.jpg" alt="Decorative Light"></div>
+      <div class="card-image"><img src="nuveon-motion-sensor-decorative-wall-light.jpg" alt="Decorative Light"></div>
       <div class="card-content">
         <h3>Wireless Motion Sensor Decorative LED Wall Light</h3>
         <div class="price">$59</div>
         <div class="card-actions">
-          <a class="link-btn" href="products/nuveon-wireless-motion-sensor-decorative-led-wall-light.html">Details</a>
+          <a class="link-btn" href="nuveon-wireless-motion-sensor-decorative-led-wall-light.html">Details</a>
         </div>
       </div>
     </div>
 
     <!-- 11. Travel Towel -->
     <div class="card">
-      <div class="card-image"><img src="assets/images/products/nuveon-travel-cotton-towel.jpg" alt="Travel Towel"></div>
+      <div class="card-image"><img src="nuveon-travel-cotton-towel.jpg" alt="Travel Towel"></div>
       <div class="card-content">
         <h3>Compressed Travel Cotton Towel</h3>
         <div class="price">$19</div>
         <div class="card-actions">
-          <a class="link-btn" href="products/nuveon-compressed-travel-cotton-towel.html">Details</a>
+          <a class="link-btn" href="nuveon-compressed-travel-cotton-towel.html">Details</a>
         </div>
       </div>
     </div>
 
     <!-- 12. Dollhouse Kit -->
     <div class="card">
-      <div class="card-image"><img src="assets/images/products/nuveon-diy-dollhouse.jpg" alt="Dollhouse Kit"></div>
+      <div class="card-image"><img src="nuveon-diy-dollhouse.jpg" alt="Dollhouse Kit"></div>
       <div class="card-content">
         <h3>DIY Miniature Dollhouse Kit</h3>
         <div class="price">$69</div>
         <div class="card-actions">
-          <a class="link-btn" href="products/nuveon-diy-miniature-dollhouse-kit.html">Details</a>
+          <a class="link-btn" href="nuveon-diy-miniature-dollhouse-kit.html">Details</a>
         </div>
       </div>
     </div>
@@ -224,27 +215,13 @@ footer{ text-align:center; padding:20px 40px 40px; color:#777; font-size:13px; }
   </div>
 </div>
 
-<div class="about-footer-wrap">
-  <div class="about" id="about">
-    <div class="about-box">
-      <h2>About NUVEON</h2>
-      <p>We curate products that combine aesthetic beauty with modern technology, focusing on Garden and Smart Home solutions.</p>
-    </div>
-    <div class="contact">
-      <h2>Contact Us</h2>
-      <p>Email: support@nuveon.com.au</p>
-      <p>Location: Sydney, Australia</p>
-    </div>
-  </div>
-
-  <div class="legal-nav">
-    <a href="privacy.html">Privacy Policy</a>
-  </div>
-
-  <footer>
-    © NUVEON — Elevate Everyday Living
-  </footer>
+<div class="legal-nav">
+  <a href="privacy.html">Privacy Policy</a>
 </div>
+
+<footer>
+  © NUVEON — Elevate Everyday Living
+</footer>
 </div>
 </body>
 </html>
