@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NUVEON | Elevate Everyday Living</title>
 <link rel="icon" type="image/png" href="favicon.png">
-
 <style>
 :root{
   --charcoal:#1F1F1F;
@@ -16,50 +14,42 @@
   --black:#121212;
   --line:#e8e2d8;
 }
-
 html{
   scroll-behavior:smooth;
 }
-
 *{
   box-sizing:border-box;
   margin:0;
   padding:0;
 }
-
 body{
   font-family:Arial, Helvetica, sans-serif;
   background:var(--stone);
   color:var(--charcoal);
   line-height:1.6;
 }
-
 .container{
   width:90%;
   max-width:1200px;
   margin:auto;
 }
-
 header{
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:22px 0;
 }
-
 .logo{
   font-size:22px;
   letter-spacing:4px;
   font-weight:500;
 }
-
 nav a{
   margin-left:28px;
   text-decoration:none;
   color:var(--charcoal);
   font-size:14px;
 }
-
 .hero{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -67,25 +57,21 @@ nav a{
   margin-top:40px;
   align-items:center;
 }
-
 .hero-left{
   background:var(--black);
   color:white;
   padding:60px;
   border-radius:20px;
 }
-
 .hero-left h1{
   font-size:48px;
   letter-spacing:4px;
   margin-bottom:15px;
 }
-
 .hero-left p{
   color:#c9c9c9;
   margin-bottom:30px;
 }
-
 .btn{
   display:inline-block;
   padding:12px 24px;
@@ -97,12 +83,10 @@ nav a{
   font-size:14px;
   transition:0.25s;
 }
-
 .btn:hover{
   opacity:0.9;
   transform:translateY(-2px);
 }
-
 .hero-img img{
   width:100%;
   height:100%;
@@ -111,27 +95,22 @@ nav a{
   border-radius:20px;
   display:block;
 }
-
 .section{
   margin-top:70px;
 }
-
 .section h2{
   font-size:30px;
   margin-bottom:15px;
 }
-
 .section p{
   color:var(--soft);
   margin-bottom:30px;
 }
-
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:25px;
 }
-
 .card{
   background:white;
   border-radius:16px;
@@ -141,56 +120,47 @@ nav a{
   flex-direction:column;
   height:100%;
 }
-
 .card:hover{
   transform:translateY(-6px);
   box-shadow:0 15px 40px rgba(0,0,0,0.1);
 }
-
 .card-image{
   width:100%;
   aspect-ratio:4 / 3;
   overflow:hidden;
   background:#f5f5f5;
 }
-
 .card-image img{
   width:100%;
   height:100%;
   object-fit:cover;
   display:block;
 }
-
 .card-content{
   padding:20px;
   display:flex;
   flex-direction:column;
   flex-grow:1;
 }
-
 .card-content h3{
   font-size:18px;
   margin-bottom:8px;
   line-height:1.4;
 }
-
 .price{
   font-size:20px;
   font-weight:700;
   margin:8px 0 10px;
   color:var(--charcoal);
 }
-
 .card-content p{
   font-size:14px;
   color:var(--soft);
   margin-bottom:18px;
 }
-
 .card-actions{
   margin-top:auto;
 }
-
 .link-btn{
   display:inline-block;
   padding:10px 18px;
@@ -202,106 +172,30 @@ nav a{
   letter-spacing:0.3px;
   transition:0.25s;
 }
-
 .link-btn:hover{
   opacity:0.92;
   transform:translateY(-2px);
 }
-
 .about{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:30px;
   margin-top:60px;
 }
-
 .about-box{
   background:#1a1a1a;
   color:white;
   padding:40px;
   border-radius:16px;
 }
-
 .contact{
   background:white;
   padding:40px;
   border-radius:16px;
 }
-
 .contact p{
   margin-bottom:10px;
 }
-
-.details-wrap{
-  margin-top:80px;
-}
-
-.detail-card{
-  background:white;
-  border-radius:18px;
-  padding:34px;
-  margin-bottom:24px;
-  box-shadow:0 8px 30px rgba(0,0,0,0.04);
-}
-
-.detail-card h3{
-  font-size:28px;
-  margin-bottom:10px;
-  line-height:1.3;
-}
-
-.detail-tagline{
-  color:var(--soft);
-  font-size:16px;
-  margin-bottom:20px;
-}
-
-.detail-grid{
-  display:grid;
-  grid-template-columns:1.2fr 1fr;
-  gap:30px;
-  align-items:start;
-}
-
-.detail-main p{
-  margin-bottom:16px;
-  color:#444;
-}
-
-.detail-main h4,
-.detail-side h4{
-  font-size:16px;
-  margin:18px 0 10px;
-}
-
-.detail-main ul,
-.detail-side ul{
-  padding-left:18px;
-  margin-bottom:16px;
-}
-
-.detail-main li,
-.detail-side li{
-  margin-bottom:8px;
-  color:#444;
-}
-
-.detail-side{
-  background:#faf8f4;
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:20px;
-}
-
-.back-top{
-  display:inline-block;
-  margin-top:18px;
-  text-decoration:none;
-  color:var(--charcoal);
-  font-size:13px;
-  font-weight:600;
-}
-
 footer{
   text-align:center;
   padding:40px;
@@ -309,59 +203,42 @@ footer{
   color:#777;
   font-size:13px;
 }
-
 @media(max-width:900px){
   header{
     flex-direction:column;
     align-items:flex-start;
     gap:12px;
   }
-
   nav a{
     margin-left:0;
     margin-right:18px;
   }
-
   .hero{
     grid-template-columns:1fr;
   }
-
   .hero-left{
     padding:36px;
   }
-
   .hero-left h1{
     font-size:38px;
   }
-
   .grid{
     grid-template-columns:1fr;
   }
-
   .about{
     grid-template-columns:1fr;
   }
-
-  .detail-grid{
-    grid-template-columns:1fr;
-  }
-
   .hero-img img{
     min-height:280px;
   }
 }
 </style>
 </head>
-
 <body>
-
 <div class="container">
-
 <header>
   <div class="logo">NUVEON</div>
-
   <nav>
-    <a href="#products">Discover</a>
     <a href="#products">Shop</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
@@ -374,24 +251,16 @@ footer{
     <h1>NUVEON</h1>
     <p>Discover smart, practical and beautifully designed products that bring ease and modern style into everyday life.</p>
     <a class="btn" href="#products">Explore Collection</a>
-    <a class="btn" href="#about">Learn More</a>
   </div>
-
   <div class="hero-img">
     <img src="assets/images/hero/nuveon-hero-modern-smart-home.jpg" alt="NUVEON Modern Smart Home">
   </div>
 </div>
 
-<div class="section">
-  <h2>Discover Better Living</h2>
-  <p>NUVEON brings together thoughtful design, practical innovation and everyday usefulness for modern living.</p>
-</div>
-
 <div class="section" id="products">
   <h2>Featured Products</h2>
-
   <div class="grid">
-
+    <!-- 产品 1: Soap Dispenser -->
     <div class="card">
       <div class="card-image">
         <img src="assets/images/products/nuveon-touchless-soap-dispenser.jpg" alt="Touchless Automatic Soap Dispenser">
@@ -399,13 +268,14 @@ footer{
       <div class="card-content">
         <h3>Touchless Automatic Soap Dispenser</h3>
         <div class="price">$49</div>
-        <p>A sleek touchless soap dispenser designed to bring hygiene, convenience and modern simplicity to everyday living.</p>
+        <p>A sleek touchless soap dispenser designed to bring hygiene and modern simplicity.</p>
         <div class="card-actions">
-          <a class="link-btn" href="#soap-dispenser">Discover More</a>
+          <a class="link-btn" href="products/nuveon-touchless-automatic-soap-dispenser.html.htm">View Details</a>
         </div>
       </div>
     </div>
 
+    <!-- 产品 2: Toothpaste Dispenser -->
     <div class="card">
       <div class="card-image">
         <img src="assets/images/products/nuveon-automatic-toothpaste-dispenser.jpg" alt="Touchless Automatic Toothpaste Dispenser">
@@ -413,13 +283,14 @@ footer{
       <div class="card-content">
         <h3>Touchless Automatic Toothpaste Dispenser</h3>
         <div class="price">$49</div>
-        <p>Touch-free smart toothpaste dispensing with precision control for a cleaner, smarter bathroom.</p>
+        <p>Touch-free smart toothpaste dispensing with precision control for a cleaner bathroom.</p>
         <div class="card-actions">
-          <a class="link-btn" href="#toothpaste-dispenser">Discover More</a>
+          <a class="link-btn" href="products/nuveon-touchless-automatic-toothpaste-dispenser.html.htm">View Details</a>
         </div>
       </div>
     </div>
 
+    <!-- 产品 3: Faucet Sensor -->
     <div class="card">
       <div class="card-image">
         <img src="assets/images/products/nuveon-faucet-sensor-adapter.jpg" alt="Touchless Smart Faucet Sensor Adapter">
@@ -427,13 +298,14 @@ footer{
       <div class="card-content">
         <h3>Touchless Smart Faucet Sensor Adapter</h3>
         <div class="price">$39</div>
-        <p>Transform your kitchen tap into a smart touchless faucet with instant sensor activation.</p>
+        <p>Transform your kitchen tap into a smart touchless faucet instantly.</p>
         <div class="card-actions">
-          <a class="link-btn" href="#faucet-sensor">Discover More</a>
+          <a class="link-btn" href="products/nuveon-touchless-smart-faucet-sensor-adapter.html.htm">View Details</a>
         </div>
       </div>
     </div>
 
+    <!-- 产品 4: Wall Light -->
     <div class="card">
       <div class="card-image">
         <img src="assets/images/products/nuveon-solar-wall-light.jpg" alt="Solar Outdoor Wall Light">
@@ -441,13 +313,14 @@ footer{
       <div class="card-content">
         <h3>Solar Outdoor Wall Light</h3>
         <div class="price">$29</div>
-        <p>Elegant solar wall lighting designed to create a warm atmosphere for gardens, balconies and outdoor living spaces.</p>
+        <p>Elegant solar lighting designed for gardens, balconies and outdoor spaces.</p>
         <div class="card-actions">
-          <a class="link-btn" href="#solar-light">Discover More</a>
+          <a class="link-btn" href="products/nuveon-solar-led-outdoor-wall-light.html.htm">View Details</a>
         </div>
       </div>
     </div>
 
+    <!-- 产品 5: Travel Towel -->
     <div class="card">
       <div class="card-image">
         <img src="assets/images/products/nuveon-travel-cotton-towel.jpg" alt="Compressed Travel Cotton Towel">
@@ -455,13 +328,14 @@ footer{
       <div class="card-content">
         <h3>Compressed Travel Cotton Towel</h3>
         <div class="price">$12</div>
-        <p>A compact travel towel that expands with water, offering softness, comfort and convenience wherever your journey takes you.</p>
+        <p>A compact travel towel that expands with water, offering softness and convenience.</p>
         <div class="card-actions">
-          <a class="link-btn" href="#travel-towel">Discover More</a>
+          <a class="link-btn" href="products/nuveon-compressed-travel-cotton-towel.html.htm">View Details</a>
         </div>
       </div>
     </div>
 
+    <!-- 产品 6: Dollhouse -->
     <div class="card">
       <div class="card-image">
         <img src="assets/images/products/nuveon-diy-dollhouse.jpg" alt="DIY Miniature Dollhouse Kit">
@@ -469,394 +343,34 @@ footer{
       <div class="card-content">
         <h3>DIY Miniature Dollhouse Kit</h3>
         <div class="price">$59</div>
-        <p>Create your own miniature world with this beautifully detailed DIY dollhouse model.</p>
+        <p>Create your own miniature world with this beautifully detailed DIY model kit.</p>
         <div class="card-actions">
-          <a class="link-btn" href="#dollhouse">Discover More</a>
+          <a class="link-btn" href="products/nuveon-diy-miniature-dollhouse-kit.html.htm">View Details</a>
         </div>
       </div>
     </div>
-
-  </div>
-</div>
-
-<div class="details-wrap">
-  <div class="section">
-    <h2>Product Details</h2>
-    <p>Explore the full features, specifications and ideal uses of each NUVEON product.</p>
-  </div>
-
-  <div class="detail-card" id="soap-dispenser">
-    <h3>Touchless Automatic Soap Dispenser</h3>
-    <p class="detail-tagline">A sleek touchless soap dispenser designed to bring hygiene, convenience and modern simplicity to everyday living.</p>
-    <div class="detail-grid">
-      <div class="detail-main">
-        <p>This touchless automatic soap dispenser uses advanced infrared sensor technology to deliver a perfect amount of soap without physical contact. Designed with a clean and modern aesthetic, it enhances hygiene in kitchens, bathrooms and workplaces while reducing waste and mess.</p>
-
-        <p>The elegant design fits effortlessly into contemporary interiors while providing a practical and hygienic hand-washing solution for everyday use.</p>
-
-        <h4>Key Features</h4>
-        <ul>
-          <li>Touchless infrared sensor for automatic dispensing</li>
-          <li>Helps reduce cross-contamination and improve hygiene</li>
-          <li>Elegant minimal design for modern homes</li>
-          <li>Easy refill system for liquid or foam soap</li>
-          <li>Energy efficient operation with long battery life</li>
-        </ul>
-
-        <h4>Ideal For</h4>
-        <ul>
-          <li>Bathroom sinks</li>
-          <li>Kitchen handwashing</li>
-          <li>Office environments</li>
-          <li>Guest bathrooms</li>
-          <li>Restaurants and cafés</li>
-        </ul>
-      </div>
-      <div class="detail-side">
-        <h4>Dimensions</h4>
-        <p>125 mm (W) × 150 mm (H) × 73 mm (D)</p>
-
-        <h4>Specifications</h4>
-        <ul>
-          <li>Product Type: Automatic Soap Dispenser</li>
-          <li>Operation: Touchless Infrared Sensor</li>
-          <li>Dispensing Type: Foam / Liquid (depending on model)</li>
-          <li>Power Source: Battery powered</li>
-          <li>Installation: Countertop / Freestanding</li>
-          <li>Usage: Bathroom / Kitchen / Office</li>
-        </ul>
-
-        <h4>Material</h4>
-        <p>Durable ABS plastic housing</p>
-
-        <h4>Package Includes</h4>
-        <p>1 × Touchless Automatic Soap Dispenser<br>1 × User guide</p>
-
-        <h4>Care & Notes</h4>
-        <p>Use suitable liquid or foam soap depending on the dispenser model. Avoid filling with thick or gel-based soap that may affect dispensing performance. Clean the sensor area periodically to maintain optimal performance.</p>
-      </div>
-    </div>
-    <a class="back-top" href="#products">← Back to products</a>
-  </div>
-
-  <div class="detail-card" id="toothpaste-dispenser">
-    <h3>Touchless Automatic Toothpaste Dispenser</h3>
-    <p class="detail-tagline">Touch-free smart toothpaste dispenser with precision control for a cleaner, smarter bathroom.</p>
-    <div class="detail-grid">
-      <div class="detail-main">
-        <p>A modern touchless automatic toothpaste dispenser designed to make daily brushing cleaner, easier and more hygienic. Using advanced infrared sensing technology, the dispenser automatically releases toothpaste when a toothbrush is detected. The stepless adjustment knob allows precise control of toothpaste amount, suitable for both adults and children.</p>
-
-        <p>Powered by a high-efficiency vacuum pump system, it ensures smooth and accurate dispensing every time. The device features Type-C rechargeable battery technology with ultra-long battery life, lasting up to six months on a single charge.</p>
-
-        <p>Installation is quick and simple with punch-free adhesive mounting, keeping your wall intact while maintaining a clean and modern bathroom look.</p>
-
-        <h4>Key Features</h4>
-        <ul>
-          <li>Touchless infrared sensor dispensing</li>
-          <li>Stepless dosage adjustment for precise control</li>
-          <li>Advanced vacuum pump system for smooth dispensing</li>
-          <li>Soft elastic nozzle suitable for children and adults</li>
-          <li>Rechargeable battery with up to 6 months of use</li>
-          <li>Type-C fast charging</li>
-          <li>Punch-free adhesive wall installation</li>
-          <li>Available in Morning Light (White) and Midnight Black</li>
-        </ul>
-
-        <h4>Ideal For</h4>
-        <ul>
-          <li>Family bathrooms</li>
-          <li>Children learning to brush independently</li>
-          <li>Minimalist smart homes</li>
-          <li>Hygienic bathroom setups</li>
-          <li>Modern apartment living</li>
-        </ul>
-      </div>
-      <div class="detail-side">
-        <h4>Specifications</h4>
-        <ul>
-          <li>Product Type: Automatic Toothpaste Dispenser</li>
-          <li>Control Method: Infrared Sensor + Manual Adjustment Knob</li>
-          <li>Dispensing Mode: Touchless Automatic</li>
-          <li>Dosage Control: Stepless Adjustable</li>
-          <li>Pump Technology: FV Precision Vacuum Pump</li>
-          <li>Charging Port: Type-C</li>
-          <li>Battery Life: Up to 6 Months per Charge</li>
-          <li>Installation: Adhesive Wall Mount (Punch-Free)</li>
-          <li>Compatibility: Suitable for most standard toothpaste tubes</li>
-        </ul>
-
-        <h4>Material</h4>
-        <p>High-quality ABS with food-grade silicone dispensing interface</p>
-
-        <h4>Package Includes</h4>
-        <p>1 × Automatic Toothpaste Dispenser<br>1 × Wall Adhesive Mount<br>1 × Charging Cable (Type-C)<br>1 × User Guide</p>
-
-        <h4>Care & Notes</h4>
-        <p>For optimal performance, ensure the toothpaste tube is properly installed and tightened before use. Recharge the device when battery power becomes low.</p>
-
-        <h4>Safety Notice</h4>
-        <p>Children should use the product under adult supervision to ensure correct toothpaste dosage and safe operation.</p>
-      </div>
-    </div>
-    <a class="back-top" href="#products">← Back to products</a>
-  </div>
-
-  <div class="detail-card" id="faucet-sensor">
-    <h3>Touchless Smart Faucet Sensor Adapter</h3>
-    <p class="detail-tagline">Transform your kitchen tap into a smart touchless faucet with instant sensor activation.</p>
-    <div class="detail-grid">
-      <div class="detail-main">
-        <p>A compact smart faucet sensor adapter designed to transform standard kitchen taps into touchless automatic faucets. Using dual infrared sensing technology, water flows instantly when hands are detected and stops automatically when hands are removed, helping to improve hygiene, reduce water waste and enhance modern smart living.</p>
-
-        <h4>Key Features</h4>
-        <ul>
-          <li>Touchless infrared sensing technology for hygienic operation</li>
-          <li>Dual sensor modes for different usage scenarios</li>
-          <li>Instant water flow response within 0.1 seconds</li>
-          <li>Automatic shut-off to prevent water waste</li>
-          <li>USB rechargeable lithium battery</li>
-          <li>Easy installation on most standard faucets</li>
-          <li>Modern stainless-steel finish for a premium kitchen look</li>
-        </ul>
-
-        <h4>Ideal For</h4>
-        <ul>
-          <li>Kitchen sinks</li>
-          <li>Bathroom faucets</li>
-          <li>Modern smart homes</li>
-          <li>Families with children</li>
-          <li>Hygienic food preparation areas</li>
-          <li>Water-saving households</li>
-        </ul>
-      </div>
-      <div class="detail-side">
-        <h4>Dimensions</h4>
-        <p>41 mm (W) × 41 mm (L) × 79 mm (H)</p>
-
-        <h4>Specifications</h4>
-        <ul>
-          <li>Sensor Type: Dual Infrared Sensor</li>
-          <li>Power Source: Rechargeable Lithium Battery</li>
-          <li>Battery Capacity: 500 mAh</li>
-          <li>Charging Port: Micro USB</li>
-          <li>Charging Voltage: 5V / 1A</li>
-          <li>Working Voltage: DC 3.2 – 4.1 V</li>
-          <li>Water Pressure: 0.05 MPa – 0.8 MPa</li>
-          <li>Maximum Water Temperature: ≤ 75°C</li>
-          <li>Response Time: 0.1 second</li>
-          <li>Installation: Faucet Mounted</li>
-          <li>Compatible Thread: External Thread M24 / Internal Thread M22</li>
-        </ul>
-
-        <h4>Material</h4>
-        <p>Premium stainless steel and ABS housing</p>
-
-        <h4>Package Includes</h4>
-        <p>1 × Smart Faucet Sensor Adapter<br>1 × Charging Cable<br>2 × Faucet Thread Adapters (M22 / M24)<br>Installation accessories<br>User manual</p>
-
-        <h4>Care & Notes</h4>
-        <p>Charge the device fully before first use. Do not use the faucet while charging. Performance may vary depending on water pressure and faucet design.</p>
-      </div>
-    </div>
-    <a class="back-top" href="#products">← Back to products</a>
-  </div>
-
-  <div class="detail-card" id="solar-light">
-    <h3>Solar Outdoor Wall Light</h3>
-    <p class="detail-tagline">Elegant solar wall lighting designed to create a warm atmosphere for gardens, balconies and outdoor living spaces.</p>
-    <div class="detail-grid">
-      <div class="detail-main">
-        <p>A modern solar-powered outdoor wall light designed to provide soft ambient lighting for exterior walls, fences, patios and garden spaces. The warm LED glow creates a sophisticated atmosphere while remaining energy efficient and easy to install.</p>
-
-        <h4>Key Features</h4>
-        <ul>
-          <li>Solar powered — charges during the day and lights automatically at night</li>
-          <li>Dual warm LED lights creating a soft wall-washing effect</li>
-          <li>Weather resistant design suitable for outdoor environments</li>
-          <li>No wiring required for simple wall installation</li>
-          <li>Ideal for balconies, gardens, pathways and outdoor walls</li>
-        </ul>
-
-        <h4>Ideal For</h4>
-        <ul>
-          <li>Garden walls</li>
-          <li>Balcony lighting</li>
-          <li>Outdoor fences</li>
-          <li>Patio ambience lighting</li>
-          <li>Pathways</li>
-        </ul>
-      </div>
-      <div class="detail-side">
-        <h4>Dimensions</h4>
-        <p>125 mm (W) × 75 mm (H) × 65 mm (D)</p>
-
-        <h4>Specifications</h4>
-        <ul>
-          <li>Lighting Type: Solar LED Wall Light</li>
-          <li>Light Colour: Warm Light</li>
-          <li>Lamp Quantity: Dual Lamp</li>
-          <li>Power Source: Solar</li>
-          <li>Installation: Wall Mounted</li>
-          <li>Usage: Outdoor / Garden / Balcony / Fence</li>
-        </ul>
-
-        <h4>Material</h4>
-        <p>High-quality ABS</p>
-
-        <h4>Package Includes</h4>
-        <p>1 × Solar Outdoor Wall Light<br>Mounting accessories</p>
-
-        <h4>Care & Notes</h4>
-        <p>Ensure the solar panel receives direct sunlight during the day for optimal charging performance. Lighting duration may vary depending on sunlight conditions.</p>
-      </div>
-    </div>
-    <a class="back-top" href="#products">← Back to products</a>
-  </div>
-
-  <div class="detail-card" id="travel-towel">
-    <h3>Compressed Travel Cotton Towel</h3>
-    <p class="detail-tagline">A compact travel towel that expands with water, offering softness, comfort and convenience wherever your journey takes you.</p>
-    <div class="detail-grid">
-      <div class="detail-main">
-        <p>This compressed travel cotton towel is designed for modern travellers who value convenience, hygiene and comfort. Packed into a compact size for easy carrying, the towel expands into a full-size bath towel once it comes into contact with water.</p>
-
-        <p>Made from soft plant-based fibers with a thick 90gsm fabric structure, it provides excellent absorbency and a gentle touch on skin. The large size ensures full-body coverage while remaining lightweight and space-saving for travel, gym, outdoor activities and everyday use.</p>
-
-        <p>Each towel is individually packed for cleanliness and portability, making it an ideal companion for travel, sports and outdoor adventures.</p>
-
-        <h4>Key Features</h4>
-        <ul>
-          <li>Compressed travel design for easy packing</li>
-          <li>Expands into a full-size towel when wet</li>
-          <li>Ultra absorbent fabric for efficient drying</li>
-          <li>Extra thick 90gsm material for durability</li>
-          <li>Soft plant-based fibres gentle on skin</li>
-          <li>Lint-free performance even with repeated use</li>
-        </ul>
-
-        <h4>Ideal For</h4>
-        <ul>
-          <li>Travel and holidays</li>
-          <li>Gym and fitness sessions</li>
-          <li>Camping and outdoor activities</li>
-          <li>Swimming and sports</li>
-          <li>Hotels and business trips</li>
-          <li>Emergency hygiene kits</li>
-        </ul>
-      </div>
-      <div class="detail-side">
-        <h4>Dimensions</h4>
-        <p>70 cm (W) × 140 cm (H)</p>
-
-        <h4>Specifications</h4>
-        <ul>
-          <li>Product Type: Compressed Travel Towel</li>
-          <li>Material: Plant-based fiber fabric</li>
-          <li>Fabric Weight: 90g/m² high-density fabric</li>
-          <li>Design: Compressed compact packaging</li>
-          <li>Usage: Travel / Gym / Outdoor / Home</li>
-          <li>Packaging: Individually packed hygienic packaging</li>
-        </ul>
-
-        <h4>Material</h4>
-        <p>Plant-based fiber fabric with soft textured cotton-like surface</p>
-
-        <h4>Package Includes</h4>
-        <p>1 × Compressed Travel Cotton Towel<br>Individual hygienic packaging</p>
-
-        <h4>Care & Notes</h4>
-        <p>Add water to allow the towel to fully expand before use. Suitable for drying body, hair or hands. Allow towel to dry after use if reused. Store in a clean and dry environment when travelling.</p>
-      </div>
-    </div>
-    <a class="back-top" href="#products">← Back to products</a>
-  </div>
-
-  <div class="detail-card" id="dollhouse">
-    <h3>DIY Miniature Dollhouse Kit – 3D Wooden Mini House Model with LED Lights</h3>
-    <p class="detail-tagline">Create your own miniature world with this beautifully detailed DIY dollhouse model.</p>
-    <div class="detail-grid">
-      <div class="detail-main">
-        <p>This DIY Miniature Dollhouse Kit allows you to build a beautifully detailed miniature home scene with realistic furniture, warm LED lighting and charming interior decoration. Designed as a creative hands-on craft project, the kit includes precision-cut components, miniature accessories and lighting elements that bring the house to life once assembled.</p>
-
-        <p>The openable design allows you to view the interior spaces and enjoy the intricate details from different angles. Perfect as a relaxing craft activity, decorative display piece or thoughtful gift, this miniature house creates a warm and imaginative world in a compact space.</p>
-
-        <h4>Key Features</h4>
-        <ul>
-          <li>DIY miniature house kit with detailed home scene</li>
-          <li>Warm LED lighting creates a cozy and realistic atmosphere</li>
-          <li>Openable design reveals the interior rooms</li>
-          <li>Includes highly detailed furniture and accessories</li>
-          <li>Relaxing and engaging hands-on craft experience</li>
-          <li>Beautiful decorative display piece for the home</li>
-        </ul>
-
-        <h4>Ideal For</h4>
-        <ul>
-          <li>Creative DIY hobby projects</li>
-          <li>Children and teenagers craft activities</li>
-          <li>Home décor and display pieces</li>
-          <li>Gifts for birthdays or holidays</li>
-          <li>Miniature collectors</li>
-          <li>Relaxing craft and creative time</li>
-        </ul>
-      </div>
-      <div class="detail-side">
-        <h4>Dimensions</h4>
-        <p>Assembled: 16 cm (W) × 13 cm (H) × 9.5 cm (D)<br>Closed Size: 8.5 cm × 16 cm × 9 cm</p>
-
-        <h4>Specifications</h4>
-        <ul>
-          <li>Series: Mini House Series – Warm House</li>
-          <li>Assembly Type: DIY hand assembly</li>
-          <li>Lighting: Warm LED interior lights</li>
-          <li>Material: Wood, fabric, plastic, paper components</li>
-          <li>Weight: 970 g</li>
-          <li>Difficulty Level: Moderate DIY assembly</li>
-        </ul>
-
-        <h4>Material</h4>
-        <p>Wood, fabric, plastic and paper miniature components</p>
-
-        <h4>Package Includes</h4>
-        <p>1 × DIY Miniature Dollhouse Kit<br>Miniature furniture and accessories<br>LED lighting components<br>Assembly materials<br>Instruction manual</p>
-
-        <h4>Care & Notes</h4>
-        <p>This product requires DIY assembly. Small parts included — adult supervision recommended for younger children. Handle miniature components carefully during assembly and ensure LED components are connected according to instructions.</p>
-
-        <h4>Safety Notice</h4>
-        <p>This product contains small parts that may pose a choking hazard. Not suitable for children under 5 years old. Children should assemble this product under adult supervision.</p>
-      </div>
-    </div>
-    <a class="back-top" href="#products">← Back to products</a>
   </div>
 </div>
 
 <div class="about" id="about">
-
   <div class="about-box">
     <h2>About NUVEON</h2>
     <p>NUVEON is a curated discovery store focused on intelligent design, practical innovation and beautifully designed products for modern living.</p>
   </div>
-
   <div class="contact" id="contact">
     <h2>Contact</h2>
     <p><strong>Phone</strong></p>
     <p>0434 198 597</p>
-
     <p><strong>Email</strong></p>
     <p>support@nuveon.com.au</p>
-
     <p><strong>Website</strong></p>
     <p>www.nuveon.com.au</p>
   </div>
-
 </div>
 
 <footer>
   © NUVEON — Elevate Everyday Living
 </footer>
-
 </div>
-
 </body>
 </html>
