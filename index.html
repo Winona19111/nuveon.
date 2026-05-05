@@ -171,17 +171,21 @@ nav a{
   transition:0.25s;
 }
 .link-btn.buy-now {
-  background: #2e7d32; /* 绿色代表购买 */
+  background: #2e7d32;
 }
 .link-btn:hover{
   opacity:0.92;
   transform:translateY(-2px);
 }
+.about-footer-wrap {
+  margin-top: 60px;
+  border-top: 1px solid var(--line);
+  padding-top: 40px;
+}
 .about{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:30px;
-  margin-top:60px;
 }
 .about-box{
   background:#1a1a1a;
@@ -194,10 +198,22 @@ nav a{
   padding:40px;
   border-radius:16px;
 }
+.legal-nav {
+  text-align: center;
+  margin-top: 40px;
+}
+.legal-nav a {
+  color: var(--soft);
+  text-decoration: none;
+  font-size: 13px;
+  margin: 0 10px;
+}
+.legal-nav a:hover {
+  text-decoration: underline;
+}
 footer{
   text-align:center;
-  padding:40px;
-  margin-top:80px;
+  padding:20px 40px 40px;
   color:#777;
   font-size:13px;
 }
@@ -234,14 +250,14 @@ footer{
 <div class="section" id="products">
   <h2>Featured Products</h2>
   <div class="grid">
-    <!-- 产品 1: Soap Dispenser (已绑定 Stripe 链接) -->
+    <!-- 产品 1: Soap Dispenser (价格已改为 $89) -->
     <div class="card">
       <div class="card-image">
         <img src="assets/images/products/nuveon-touchless-soap-dispenser.jpg" alt="Touchless Automatic Soap Dispenser">
       </div>
       <div class="card-content">
         <h3>Touchless Automatic Soap Dispenser</h3>
-        <div class="price">$49</div>
+        <div class="price">$89</div>
         <p>A sleek touchless soap dispenser designed for hygiene and modern simplicity.</p>
         <div class="card-actions">
           <a class="link-btn" href="products/nuveon-touchless-automatic-soap-dispenser.html.htm">View</a>
@@ -282,21 +298,27 @@ footer{
   </div>
 </div>
 
-<div class="about" id="about">
-  <div class="about-box">
-    <h2>About NUVEON</h2>
-    <p>NUVEON is a curated discovery store focused on intelligent design and practical innovation.</p>
+<div class="about-footer-wrap">
+  <div class="about" id="about">
+    <div class="about-box">
+      <h2>About NUVEON</h2>
+      <p>NUVEON is a curated discovery store focused on intelligent design and practical innovation.</p>
+    </div>
+    <div class="contact" id="contact">
+      <h2>Contact</h2>
+      <p><strong>Email</strong>: support@nuveon.com.au</p>
+      <p><strong>Phone</strong>: 0434 198 597</p>
+    </div>
   </div>
-  <div class="contact" id="contact">
-    <h2>Contact</h2>
-    <p><strong>Email</strong>: support@nuveon.com.au</p>
-    <p><strong>Phone</strong>: 0434 198 597</p>
-  </div>
-</div>
 
-<footer>
-  © NUVEON — Elevate Everyday Living
-</footer>
+  <div class="legal-nav">
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+
+  <footer>
+    © NUVEON — Elevate Everyday Living
+  </footer>
+</div>
 </div>
 </body>
 </html>
