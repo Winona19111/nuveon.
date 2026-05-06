@@ -1,138 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Touchless Soap Dispenser | NUVEON</title>
-
-<style>
-body{
-  font-family: Arial, Helvetica, sans-serif;
-  margin:0;
-  background:#f5f5f5;
-  color:#222;
-}
-
-.container{
-  max-width:1000px;
-  margin:40px auto;
-  padding:20px;
-}
-
-a{
-  text-decoration:none;
-  color:#333;
-}
-
-.back{
-  margin-bottom:20px;
-  display:inline-block;
-}
-
-.product{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  background:white;
-  padding:30px;
-  border-radius:16px;
-}
-
-.product img{
-  width:100%;
-  border-radius:12px;
-}
-
-h1{
-  margin-bottom:10px;
-}
-
-.price{
-  font-size:26px;
-  font-weight:bold;
-  margin:15px 0;
-}
-
-.desc{
-  margin-bottom:20px;
-  line-height:1.6;
-}
-
-ul{
-  margin-bottom:20px;
-}
-
-.btn{
-  display:inline-block;
-  padding:12px 20px;
-  border-radius:30px;
-  background:black;
-  color:white;
-  font-size:14px;
-}
-
-.btn:hover{
-  opacity:0.8;
-}
-
-footer{
-  text-align:center;
-  margin-top:50px;
-  font-size:13px;
-}
-
-@media(max-width:768px){
-  .product{
-    grid-template-columns:1fr;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Touchless Automatic Soap Dispenser | NUVEON</title>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <style>
+    :root { --charcoal:#1F1F1F; --stone:#D8D2C8; --soft:#6d6d6d; --white:#ffffff; --black:#121212; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:Arial, sans-serif; background:var(--stone); color:var(--charcoal); line-height:1.6; }
+    .container { width:90%; max-width:1100px; margin:auto; padding:30px 0 60px; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:22px 0; }
+    .logo { font-size:22px; letter-spacing:4px; font-weight:600; text-decoration:none; color:var(--charcoal); }
+    nav a { margin-left:28px; text-decoration:none; color:var(--charcoal); font-size:14px; }
+    .product-layout { display:grid; grid-template-columns:1fr 1fr; gap:50px; margin-top:40px; align-items:start; }
+    .product-image img { width:100%; border-radius:20px; object-fit:cover; aspect-ratio:1/1; background:#f0f0f0; }
+    .product-info h1 { font-size:28px; letter-spacing:2px; margin-bottom:10px; }
+    .tagline { color:var(--soft); margin-bottom:20px; font-size:15px; }
+    .price { font-size:32px; font-weight:700; margin-bottom:25px; }
+    .buy-btn { display:inline-block; width:100%; text-align:center; padding:15px 30px; background:var(--black); color:white; text-decoration:none; border-radius:30px; font-size:16px; letter-spacing:1px; margin-bottom:15px; transition:opacity 0.2s; }
+    .buy-btn:hover { opacity:0.85; }
+    .features { margin-top:30px; }
+    .features h3 { font-size:16px; letter-spacing:1px; margin-bottom:12px; }
+    .features li { margin-left:18px; margin-bottom:6px; font-size:14px; color:#444; }
+    .back-link { display:inline-block; margin-bottom:20px; color:var(--soft); text-decoration:none; font-size:14px; }
+    @media(max-width:800px){ .product-layout { grid-template-columns:1fr; } }
+  </style>
 </head>
-
 <body>
-
 <div class="container">
 
-<a class="back" href="../index.html">← Back to Home</a>
+  <header>
+    <a class="logo" href="../index.html">NUVEON</a>
+    <nav>
+      <a href="../index.html#products">Shop</a>
+      <a href="../index.html#about">About</a>
+    </nav>
+  </header>
 
-<div class="product">
+  <a class="back-link" href="../index.html">&#8592; Back to Shop</a>
 
-<div>
-<img src="../assets/images/products/nuveon-touchless-soap-dispenser.jpg" alt="Touchless Soap Dispenser">
+  <div class="product-layout">
+
+    <div class="product-image">
+      <img src="../assets/images/products/nuveon-touchless-soap-dispenser.jpg" alt="Touchless Automatic Soap Dispenser">
+    </div>
+
+    <div class="product-info">
+      <h1>Touchless Automatic Soap Dispenser</h1>
+      <p class="tagline">Hygiene, convenience and modern simplicity for everyday living.</p>
+      <div class="price">$89</div>
+
+      <a class="buy-btn" href="https://buy.stripe.com/test_8x23cv0RY91ggw92OGe3e00" target="_blank" rel="noopener noreferrer">
+        Buy Now
+      </a>
+
+      <div class="features">
+        <h3>Key Features</h3>
+        <ul>
+          <li><strong>Touchless Infrared Sensor</strong> - dispenses without contact</li>
+          <li><strong>Hygienic &amp; Safe</strong> - reduces cross-contamination</li>
+          <li><strong>Elegant Modern Design</strong> - minimal and stylish</li>
+          <li><strong>Easy Refill System</strong> - liquid or foam soap</li>
+          <li><strong>Energy Efficient</strong> - long battery life</li>
+        </ul>
+      </div>
+
+      <div class="features" style="margin-top:25px;">
+        <h3>Specifications</h3>
+        <ul>
+          <li>Operation: Touchless Infrared Sensor</li>
+          <li>Power Source: Battery powered</li>
+          <li>Installation: Countertop / Freestanding</li>
+          <li>Dimensions: 125mm (W) x 150mm (H) x 73mm (D)</li>
+          <li>Material: Durable ABS plastic</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
 </div>
-
-<div>
-
-<h1>Touchless Automatic Soap Dispenser</h1>
-
-<div class="price">$89 AUD</div>
-
-<p class="desc">
-Upgrade your hygiene routine with this sleek and modern touchless soap dispenser. Designed for convenience and cleanliness, it uses infrared sensing technology to dispense soap automatically without contact.
-</p>
-
-<ul>
-<li>Touchless infrared sensor</li>
-<li>Hygienic and easy to use</li>
-<li>Modern minimalist design</li>
-<li>Suitable for bathroom, kitchen, office</li>
-<li>Battery powered</li>
-</ul>
-
-<a class="btn" href="https://buy.stripe.com/test_8x23cv0RY91ggw920Ge3e00" target="_blank">
-Buy Now
-</a>
-
-</div>
-
-</div>
-
-<footer>
-© NUVEON — Elevate Everyday Living<br><br>
-<a href="../privacy.html">Privacy Policy</a>
-</footer>
-
-</div>
-
 </body>
 </html>
