@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>NUVEON | Elevate Everyday Living</title>
+
   <link rel="icon" type="image/png" href="favicon.png">
 
   <style>
@@ -17,7 +18,9 @@
       --line:#e8e2d8;
     }
 
-    html { scroll-behavior:smooth; }
+    html {
+      scroll-behavior:smooth;
+    }
 
     * {
       box-sizing:border-box;
@@ -26,7 +29,7 @@
     }
 
     body {
-      font-family:Arial,sans-serif;
+      font-family:Arial, sans-serif;
       background:var(--stone);
       color:var(--charcoal);
       line-height:1.6;
@@ -103,7 +106,9 @@
       display:block;
     }
 
-    .section { margin-top:70px; }
+    .section {
+      margin-top:70px;
+    }
 
     .section h2 {
       font-size:30px;
@@ -114,7 +119,7 @@
 
     .grid {
       display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+      grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
       gap:25px;
     }
 
@@ -170,37 +175,22 @@
       margin-top:auto;
       display:flex;
       gap:10px;
-      flex-wrap:wrap;
     }
 
     .link-btn {
       flex:1;
       text-align:center;
-      padding:10px 8px;
+      padding:10px;
       border-radius:24px;
       background:#121212;
       color:white;
       text-decoration:none;
       font-size:13px;
-      white-space:nowrap;
     }
 
-    .link-btn:hover { opacity:0.85; }
-
-    .buy-btn {
-      flex:1;
-      text-align:center;
-      padding:10px 8px;
-      border-radius:24px;
-      background:#8B6B45;
-      color:white;
-      text-decoration:none;
-      font-size:13px;
-      font-weight:600;
-      white-space:nowrap;
+    .link-btn:hover {
+      opacity:0.85;
     }
-
-    .buy-btn:hover { opacity:0.85; }
 
     .about-footer-wrap {
       margin-top:80px;
@@ -247,9 +237,17 @@
     }
 
     @media(max-width:900px) {
-      .hero { grid-template-columns:1fr; }
-      .grid { grid-template-columns:1fr; }
-      .about { grid-template-columns:1fr; }
+      .hero {
+        grid-template-columns:1fr;
+      }
+
+      .grid {
+        grid-template-columns:1fr;
+      }
+
+      .about {
+        grid-template-columns:1fr;
+      }
     }
   </style>
 </head>
@@ -296,9 +294,10 @@
 
     <div class="grid">
 
-      <!-- 1. Christmas Tree Electric Train Set -->
+      <!-- Christmas Tree Electric Train Set -->
 
       <div class="card">
+
         <div class="card-image">
           <img
             src="assets/images/products/nuveon-christmas-tree-electric-train.jpg"
@@ -307,58 +306,82 @@
         </div>
 
         <div class="card-content">
-          <h3>Christmas Tree Electric Train Set</h3>
+
+          <h3>
+            Christmas Tree Electric Train Set
+          </h3>
+
           <div class="price">$89</div>
 
           <div class="card-actions">
-            <a class="link-btn"
-               href="products/nuveon-christmas-tree-electric-train.html">
+
+            <a
+              class="link-btn"
+              href="products/nuveon-christmas-tree-electric-train.html"
+            >
               Details
             </a>
 
-            <a class="buy-btn"
-               href="https://buy.stripe.com/fZu9ATapTc3b3mw3QNf7i0o"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a
+              class="link-btn"
+              href="https://buy.stripe.com/fZu9ATapTc3b3mw3QNf7i0o"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Buy Now
             </a>
+
           </div>
+
         </div>
       </div>
 
-      <!-- 2. Christmas Musical Carriage Snow Globe -->
+      <!-- Christmas Musical Carriage -->
 
       <div class="card">
+
         <div class="card-image">
           <img
             src="assets/images/products/nuveon-christmas-musical-carriage.jpg"
-            alt="Christmas Musical Carriage Snow Globe"
+            alt="Christmas Musical Carriage"
           >
         </div>
 
         <div class="card-content">
-          <h3>Christmas Musical Carriage Snow Globe</h3>
+
+          <h3>
+            Christmas Musical Carriage
+          </h3>
+
           <div class="price">$139</div>
 
           <div class="card-actions">
-            <a class="link-btn"
-               href="products/nuveon-christmas-musical-carriage.html">
+
+            <a
+              class="link-btn"
+              href="products/nuveon-christmas-musical-carriage.html"
+            >
               Details
             </a>
 
-            <a class="buy-btn"
-               href="https://buy.stripe.com/bJe5kDcy1ebj5uE1IFf7i0n"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a
+              class="link-btn"
+              href="https://buy.stripe.com/bJe5kDcy1ebj5uE1IFf7i0n"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Buy Now
             </a>
+
           </div>
+
         </div>
       </div>
 
-      <!-- 3. Christmas DIY Miniature House Kit -->
+      <!-- Christmas DIY Miniature House Kit -->
 
       <div class="card">
+
         <div class="card-image">
           <img
             src="assets/images/products/nuveon-christmas-diy-miniature-house.jpg"
@@ -367,28 +390,40 @@
         </div>
 
         <div class="card-content">
-          <h3>Christmas DIY Miniature House Kit</h3>
+
+          <h3>
+            Christmas DIY Miniature House Kit
+          </h3>
+
           <div class="price">$79</div>
 
           <div class="card-actions">
-            <a class="link-btn"
-               href="products/nuveon-christmas-diy-miniature-house.html">
+
+            <a
+              class="link-btn"
+              href="products/nuveon-christmas-diy-miniature-house.html"
+            >
               Details
             </a>
 
-            <a class="buy-btn"
-               href="https://buy.stripe.com/8x27sLgOh9V32is2MJf7i0m"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a
+              class="link-btn"
+              href="https://buy.stripe.com/8x27sLgOh9V32is2MJf7i0m"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Buy Now
             </a>
+
           </div>
+
         </div>
       </div>
 
-      <!-- 4. HygienicFlow Touchless Toilet Flush Kit -->
+      <!-- HygienicFlow Touchless Toilet Flush Kit -->
 
       <div class="card">
+
         <div class="card-image">
           <img
             src="assets/images/products/nuveon-hygienicflow-touchless-toilet-flush-kit.jpg"
@@ -397,28 +432,40 @@
         </div>
 
         <div class="card-content">
-          <h3>HygienicFlow Touchless Toilet Flush Kit</h3>
+
+          <h3>
+            HygienicFlow Touchless Toilet Flush Kit
+          </h3>
+
           <div class="price">$159</div>
 
           <div class="card-actions">
-            <a class="link-btn"
-               href="products/nuveon-hygienicflow-touchless-toilet-flush-kit.html">
+
+            <a
+              class="link-btn"
+              href="products/nuveon-hygienicflow-touchless-toilet-flush-kit.html"
+            >
               Details
             </a>
 
-            <a class="link-btn"
-               href="https://www.youtube.com/watch?v=SQiJWmUYOZA"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a
+              class="link-btn"
+              href="https://www.youtube.com/watch?v=SQiJWmUYOZA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Watch Video
             </a>
+
           </div>
+
         </div>
       </div>
 
-      <!-- 5. Touchless Automatic Soap Dispenser -->
+      <!-- Touchless Automatic Soap Dispenser -->
 
       <div class="card">
+
         <div class="card-image">
           <img
             src="assets/images/products/nuveon-touchless-soap-dispenser.jpg"
@@ -427,28 +474,40 @@
         </div>
 
         <div class="card-content">
-          <h3>Touchless Automatic Soap Dispenser</h3>
+
+          <h3>
+            Touchless Automatic Soap Dispenser
+          </h3>
+
           <div class="price">$159</div>
 
           <div class="card-actions">
-            <a class="link-btn"
-               href="products/nuveon-touchless-automatic-soap-dispenser.html">
+
+            <a
+              class="link-btn"
+              href="products/nuveon-touchless-automatic-soap-dispenser.html"
+            >
               Details
             </a>
 
-            <a class="link-btn"
-               href="https://www.youtube.com/watch?v=SXbqswHljC4"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a
+              class="link-btn"
+              href="https://www.youtube.com/watch?v=SXbqswHljC4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Watch Video
             </a>
+
           </div>
+
         </div>
       </div>
 
-      <!-- 6. Touchless Smart Faucet Sensor Adapter -->
+      <!-- Touchless Smart Faucet Sensor Adapter -->
 
       <div class="card">
+
         <div class="card-image">
           <img
             src="assets/images/products/nuveon-faucet-sensor-adapter.jpg"
@@ -457,21 +516,31 @@
         </div>
 
         <div class="card-content">
-          <h3>Touchless Smart Faucet Sensor Adapter</h3>
+
+          <h3>
+            Touchless Smart Faucet Sensor Adapter
+          </h3>
+
           <div class="price">$89</div>
 
           <div class="card-actions">
-            <a class="link-btn"
-               href="products/nuveon-touchless-smart-faucet-sensor-adapter.html">
+
+            <a
+              class="link-btn"
+              href="products/nuveon-touchless-smart-faucet-sensor-adapter.html"
+            >
               Details
             </a>
+
           </div>
+
         </div>
       </div>
 
-      <!-- 7. Touchless Automatic Toothpaste Dispenser -->
+      <!-- Touchless Automatic Toothpaste Dispenser -->
 
       <div class="card">
+
         <div class="card-image">
           <img
             src="assets/images/products/nuveon-automatic-toothpaste-dispenser.jpg"
@@ -480,44 +549,64 @@
         </div>
 
         <div class="card-content">
-          <h3>Touchless Automatic Toothpaste Dispenser</h3>
+
+          <h3>
+            Touchless Automatic Toothpaste Dispenser
+          </h3>
+
           <div class="price">$89</div>
 
           <div class="card-actions">
-            <a class="link-btn"
-               href="products/nuveon-touchless-automatic-toothpaste-dispenser.html">
+
+            <a
+              class="link-btn"
+              href="products/nuveon-touchless-automatic-toothpaste-dispenser.html"
+            >
               Details
             </a>
+
           </div>
+
         </div>
       </div>
 
-      <!-- 8. Electric Automatic Salt & Pepper Grinder -->
+      <!-- Electric Automatic Salt and Pepper Grinder -->
 
       <div class="card">
+
         <div class="card-image">
           <img
             src="assets/images/products/nuveon-electric-automatic-salt-pepper-grinder.jpg"
-            alt="Electric Automatic Salt & Pepper Grinder"
+            alt="Electric Automatic Salt &amp; Pepper Grinder"
           >
         </div>
 
         <div class="card-content">
-          <h3>Electric Automatic Salt &amp; Pepper Grinder</h3>
+
+          <h3>
+            Electric Automatic Salt &amp; Pepper Grinder
+          </h3>
+
           <div class="price">$89</div>
 
           <div class="card-actions">
-            <a class="link-btn"
-               href="products/nuveon-electric-automatic-salt-pepper-grinder.html">
+
+            <a
+              class="link-btn"
+              href="products/nuveon-electric-automatic-salt-pepper-grinder.html"
+            >
               Details
             </a>
+
           </div>
+
         </div>
       </div>
 
-      <!-- 9. AuraGlow Solar Bee String Lights -->
+      <!-- AuraGlow Solar Bee String Lights -->
 
       <div class="card">
+
         <div class="card-image">
           <img
             src="assets/images/products/nuveon-auraglow-solar-bee-string-lights.jpg"
@@ -526,21 +615,31 @@
         </div>
 
         <div class="card-content">
-          <h3>AuraGlow Solar Bee String Lights</h3>
+
+          <h3>
+            AuraGlow Solar Bee String Lights
+          </h3>
+
           <div class="price">$29</div>
 
           <div class="card-actions">
-            <a class="link-btn"
-               href="products/nuveon-auraglow-solar-bee-string-lights.html">
+
+            <a
+              class="link-btn"
+              href="products/nuveon-auraglow-solar-bee-string-lights.html"
+            >
               Details
             </a>
+
           </div>
+
         </div>
       </div>
 
-      <!-- 10. AuraGlow Solar Firefly Garden Lights -->
+      <!-- AuraGlow Solar Firefly Garden Lights -->
 
       <div class="card">
+
         <div class="card-image">
           <img
             src="assets/images/products/nuveon-solar-firefly-garden-lights.jpg"
@@ -549,21 +648,31 @@
         </div>
 
         <div class="card-content">
-          <h3>AuraGlow Solar Firefly Garden Lights</h3>
+
+          <h3>
+            AuraGlow Solar Firefly Garden Lights
+          </h3>
+
           <div class="price">$35</div>
 
           <div class="card-actions">
-            <a class="link-btn"
-               href="products/nuveon-auraglow-solar-firefly-garden-lights.html">
+
+            <a
+              class="link-btn"
+              href="products/nuveon-auraglow-solar-firefly-garden-lights.html"
+            >
               Details
             </a>
+
           </div>
+
         </div>
       </div>
 
-      <!-- 11. Solar Motion Sensor LED Light -->
+      <!-- Solar Motion Sensor LED Light -->
 
       <div class="card">
+
         <div class="card-image">
           <img
             src="assets/images/products/nuveon-solar-motion-sensor-led-light.jpg"
@@ -572,21 +681,31 @@
         </div>
 
         <div class="card-content">
-          <h3>Solar Motion Sensor LED Light</h3>
+
+          <h3>
+            Solar Motion Sensor LED Light
+          </h3>
+
           <div class="price">$16</div>
 
           <div class="card-actions">
-            <a class="link-btn"
-               href="products/nuveon-solar-motion-sensor-led-light.html">
+
+            <a
+              class="link-btn"
+              href="products/nuveon-solar-motion-sensor-led-light.html"
+            >
               Details
             </a>
+
           </div>
+
         </div>
       </div>
 
-      <!-- 12. Solar LED Outdoor Wall Light -->
+      <!-- Solar LED Outdoor Wall Light -->
 
       <div class="card">
+
         <div class="card-image">
           <img
             src="assets/images/products/nuveon-solar-wall-light.jpg"
@@ -595,21 +714,31 @@
         </div>
 
         <div class="card-content">
-          <h3>Solar LED Outdoor Wall Light</h3>
+
+          <h3>
+            Solar LED Outdoor Wall Light
+          </h3>
+
           <div class="price">$29</div>
 
           <div class="card-actions">
-            <a class="link-btn"
-               href="products/nuveon-solar-led-outdoor-wall-light.html">
+
+            <a
+              class="link-btn"
+              href="products/nuveon-solar-led-outdoor-wall-light.html"
+            >
               Details
             </a>
+
           </div>
+
         </div>
       </div>
 
-      <!-- 13. Wireless Motion Sensor Decorative LED Wall Light -->
+      <!-- Wireless Motion Sensor Decorative LED Wall Light -->
 
       <div class="card">
+
         <div class="card-image">
           <img
             src="assets/images/products/nuveon-motion-sensor-decorative-wall-light.jpg"
@@ -618,21 +747,31 @@
         </div>
 
         <div class="card-content">
-          <h3>Wireless Motion Sensor Decorative LED Wall Light</h3>
+
+          <h3>
+            Wireless Motion Sensor Decorative LED Wall Light
+          </h3>
+
           <div class="price">$59</div>
 
           <div class="card-actions">
-            <a class="link-btn"
-               href="products/nuveon-wireless-motion-sensor-decorative-led-wall-light.html">
+
+            <a
+              class="link-btn"
+              href="products/nuveon-wireless-motion-sensor-decorative-led-wall-light.html"
+            >
               Details
             </a>
+
           </div>
+
         </div>
       </div>
 
-      <!-- 14. Compressed Travel Cotton Towel -->
+      <!-- Compressed Travel Cotton Towel -->
 
       <div class="card">
+
         <div class="card-image">
           <img
             src="assets/images/products/nuveon-travel-cotton-towel.jpg"
@@ -641,21 +780,31 @@
         </div>
 
         <div class="card-content">
-          <h3>Compressed Travel Cotton Towel</h3>
+
+          <h3>
+            Compressed Travel Cotton Towel
+          </h3>
+
           <div class="price">$12</div>
 
           <div class="card-actions">
-            <a class="link-btn"
-               href="products/nuveon-compressed-travel-cotton-towel.html">
+
+            <a
+              class="link-btn"
+              href="products/nuveon-compressed-travel-cotton-towel.html"
+            >
               Details
             </a>
+
           </div>
+
         </div>
       </div>
 
-      <!-- 15. DIY Miniature Dollhouse Kit -->
+      <!-- DIY Miniature Dollhouse Kit -->
 
       <div class="card">
+
         <div class="card-image">
           <img
             src="assets/images/products/nuveon-diy-dollhouse.jpg"
@@ -664,19 +813,29 @@
         </div>
 
         <div class="card-content">
-          <h3>DIY Miniature Dollhouse Kit</h3>
+
+          <h3>
+            DIY Miniature Dollhouse Kit
+          </h3>
+
           <div class="price">$49</div>
 
           <div class="card-actions">
-            <a class="link-btn"
-               href="products/nuveon-diy-miniature-dollhouse-kit.html">
+
+            <a
+              class="link-btn"
+              href="products/nuveon-diy-miniature-dollhouse-kit.html"
+            >
               Details
             </a>
+
           </div>
+
         </div>
       </div>
 
     </div>
+
   </div>
 
   <div class="about-footer-wrap">
@@ -684,29 +843,37 @@
     <div class="about" id="about">
 
       <div class="about-box">
+
         <h2>About NUVEON</h2>
 
         <p>
           We curate products that combine aesthetic beauty with modern technology,
           focusing on Garden and Smart Home solutions.
         </p>
+
       </div>
 
       <div class="contact">
+
         <h2>Contact Us</h2>
 
         <p>Email: support@nuveon.com.au</p>
         <p>Location: Sydney, Australia</p>
+
       </div>
 
     </div>
 
     <div class="legal-nav">
-      <a href="privacy.html">Privacy Statement</a>
+
+      <a href="privacy.html">
+        Privacy Statement
+      </a>
 
       <a href="returns-exchange-policy.html">
         Returns &amp; Exchange Policy
       </a>
+
     </div>
 
     <footer>
